@@ -1,0 +1,52 @@
+$side-panel-width: 200px;
+$left-controls-width: 50px;
+$right-controls-width: 50px;
+
+$main-tabs-height: 25px;
+$main-panel-transition: all .5s ease-in-out;
+
+$divided-transition: all .5s ease-in-out;
+$top-indicators-height: 43px;
+$bottom-indicators-height: 0px;
+$divider-height: 24px;
+
+$lower-buttons-height: 2.35em;
+
+$divider-buttons-width: 3em;
+
+$section-padding-width: 10px;
+$section-padding-height: 10px;
+$section-border-width: 2px;
+$section-border-height: 2px;
+
+@import "core/reset.scss";
+@import "core/fonts.scss";
+@import "core/minimal.scss";
+@import "core/fixes.scss";
+@import "core/helpers.scss";
+@import "core/clearfix.scss";
+ 
+@import "windowing/framing.scss";
+@import "windowing/side-area.scss";
+@import "windowing/main-area.scss";
+@import "windowing/lower-area.scss";
+@import "windowing/indicators.scss";
+@import "windowing/responsive.scss";
+
+@import "default-skin/fading-scrollbars.scss";
+@import "desktop/scrollbars.scss";
+@import "default-skin/drag-drop.scss";
+@import "lib-styles/pieCounter.scss";
+
+/* Prevent the text contents of draggable elements from being selectable. */
+[draggable] {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+
+@import "default-skin/basics.scss";
+@import "default-skin/gimmicks.scss";
+@import "trade/FxTicket.scss";
