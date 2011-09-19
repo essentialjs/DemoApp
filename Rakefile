@@ -4,8 +4,22 @@ desc 'Build Server Executables'
 task :executables do
   sh 'mkdir -p _server'
   sh 'rsync -rtzh ~/repositories/MeshedBuilder/ ./_server'
+  sh '_server/Meshed _server/distribute_setup.py'
+  sh '_server/Meshed _server/get-pip.py'
+  #sh '_server/bin/easy_install --allow-hosts=lxml.de,*.python.org lxml'
 end
- 
+
+desc 'Install Server Dependencies'
+task :dependencies do
+  sh '_server/bin/pip install BeautifulSoup'
+  sh '_server/bin/pip install markdown2'
+  sh '_server/bin/pip install git+git://github.com/ingydotnet/pyyaml-mirror.git#egg=PyYAML'
+  sh '_server/bin/pip install redis'
+  sh '_server/bin/pip install git+git://github.com/thepian/thepian-lib.git#egg=thepian-lib'
+  sh '_server/bin/pip install git+git://github.com/facebook/tornado'
+  sh '_server/bin/pip install git+git://github.com/thepian/thepian-pages.git#egg=thepian-pages'
+end
+
 desc 'Build site with Meshed'
 task :build do
   jekyll
