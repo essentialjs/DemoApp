@@ -1,2 +1,5 @@
+---
+Info: Test Entry
+---
 User-agent: *
 Allow: /
