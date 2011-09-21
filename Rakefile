@@ -4,6 +4,7 @@ desc 'Build Server Executables'
 task :executables do
   sh 'mkdir -p _server'
   sh 'rsync -rtzh ~/repositories/MeshedBuilder/ ./_server'
+  sh 'rsync -rtzh ~/repositories/MeshedBuilder/$OSTYPE/ ./_server'
   sh '_server/Meshed _server/distribute_setup.py'
   sh '_server/Meshed _server/get-pip.py'
   #sh '_server/bin/easy_install --allow-hosts=lxml.de,*.python.org lxml'
@@ -30,9 +31,9 @@ task :build do
   lessc 'night_sans'
 end
  
-desc 'Build and start server with --auto'
+desc 'Build and start server'
 task :server do
-  jekyll '--server --auto'
+  sh '_server/bin/runserver'
 end
 
 desc 'Build and deploy'
