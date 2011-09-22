@@ -7,14 +7,14 @@ layout: nil
   
   <url>
     <loc>{{ site.url }}</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <lastmod>{{ site.time_rfc3339 }}</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
     <loc>{{ site.url }}/other/</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <lastmod>{{ site.time_rfc3339 }}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.2</priority>
   </url>
