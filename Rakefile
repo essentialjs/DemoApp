@@ -14,6 +14,7 @@ desc 'Install Server Dependencies'
 task :dependencies do
   sh '_server/bin/pip install BeautifulSoup'
   sh '_server/bin/pip install markdown2'
+  sh '_server/bin/pip install pyScss'
   sh '_server/bin/pip install git+git://github.com/ingydotnet/pyyaml-mirror.git#egg=PyYAML'
   sh '_server/bin/pip install redis'
   sh '_server/bin/pip install git+git://github.com/thepian/thepian-lib.git#egg=thepian-lib'
