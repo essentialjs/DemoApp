@@ -15,18 +15,15 @@ $section-padding-height: 10px;
 $section-border-width: 2px;
 $section-border-height: 2px;
 
-@import "core/reset.scss";
-@import "core/fonts.scss";
-@import "core/minimal.scss";
-@import "core/fixes.scss";
-@import "core/helpers.scss";
-@import "core/clearfix.scss";
- 
+@import "core/core.scss";
+
+/* 
 @import "windowing/framing.scss";
 @import "windowing/side-area.scss";
 @import "windowing/main-area.scss";
 @import "windowing/indicators.scss";
 @import "windowing/responsive.scss";
+*/
 
 /* Prevent the text contents of draggable elements from being selectable. */
 [draggable] {
@@ -36,6 +33,7 @@ $section-border-height: 2px;
   user-select: none;
 }
 
-
+/*
 @import "default-skin/basics.scss";
 @import "default-skin/gimmicks.scss";
+*/
