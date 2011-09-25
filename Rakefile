@@ -33,9 +33,14 @@ task :build do
   lessc 'night_sans'
 end
  
-desc 'Build and start server'
+desc 'Build and start production server'
 task :server do
   sh '_server/bin/runserver'
+end
+
+desc 'Build and start dev server'
+task :devserver do
+  sh '_server/bin/runserver --debug'
 end
 
 desc 'Build and deploy'
