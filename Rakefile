@@ -20,6 +20,7 @@ task :dependencies do
   sh '_server/bin/pip install git+git://github.com/thepian/thepian-lib.git#egg=thepian-lib'
   sh '_server/bin/pip install git+git://github.com/facebook/tornado'
   sh '_server/bin/pip install git+git://github.com/thepian/thepian-pages.git#egg=thepian-pages'
+  sh '_server/bin/pip install git+git://github.com/thepian/python-daemon.git#egg=python-daemon'
   sh '_server/bin/pip install http://www.blarg.net/%7Esteveha/pyfeed-0.7.4.tar.gz#egg=pyfeed'
 end
 
