@@ -1,4 +1,4 @@
-task :default => :server
+task :default => :populate
 
 desc 'Build Server Executables'
 task :executables do
@@ -42,6 +42,11 @@ end
 desc 'Build and start dev server'
 task :devserver do
   sh '_server/bin/runserver --debug'
+end
+
+desc 'Update cache'
+task :populate do
+  sh '_server/bin/populateserver'
 end
 
 desc 'Build and deploy'
