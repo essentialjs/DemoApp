@@ -1,6 +1,10 @@
+domain: html5demoapp.com
+email: hello@html5demoapp.com
 url: http://html5demoapp.com
 img_url: http://html5demoapp.com/images
 title: HTML5 Demo App
 author: Henrik Vendelbo
 description: HTML5 Demo Application
- 
+analytics_id: UA-22749258-4
+
+exclude: Library, Rakefile 
