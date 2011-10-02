@@ -1,0 +1,11 @@
+---
+---
+CACHE MANIFEST
+
+FALLBACK:
+/ /offline/
+NETWORK:
+*
+CACHE:
+{{ list.default_appcache }}
+
