@@ -1,5 +1,6 @@
 ---
-page: simple
+document: simple
+appcache: default alternate
 ---
 
 Hello
