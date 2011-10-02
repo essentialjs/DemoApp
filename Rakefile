@@ -54,6 +54,13 @@ task :deploy => :build do
   sh 'rsync -rtzh --progress --delete _site/ tatey@tatey.com:~/var/www/tatey.com/'
 end
 
+desc 'Make a self-signed SSL certificate'
+task :devcertificate do
+  sh 'sudo ssh-keygen -f devcertificate.key'
+  sh 'sudo openssl req -new -key devcertificate.key -out devcertificate.csr'
+  sh 'sudo openssl x509 -req -days 365 -in devcertificate.csr -signkey devcertificate.key -out devcertificate.crt'
+end
+
 def jekyll(opts = '')
   sh 'rm -rf _site'
   sh 'jekyll ' + opts
