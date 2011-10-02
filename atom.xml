@@ -21,6 +21,6 @@ document: no
     <id>{{site.url}}{{ post.id }}</id>
     <content type="html">{{ post.content | xml_escape }}</content>
   </entry>
-  {% endfor %}
+  {% end %}
 
 </feed>
