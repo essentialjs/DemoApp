@@ -1,0 +1,54 @@
+body {
+	position:absolute;
+	top:0; bottom:0;
+	left:0; right:0;
+}
+#cloud-bar {
+	position:fixed;
+	left:0; right:0;
+	top:0; height: $fixed-bar-height;
+	z-index:100;
+}
+
+#bigspace {
+	width:1000%;
+	height:1000%;
+}
+
+#cloud-plans {
+	position:absolute;
+	width:50%;
+	height:50%;
+
+	left:800px;
+
+	#cloud-babyblue {
+	}
+	#cloud-purple {
+		
+	}
+	#cloud-white {
+		
+	}
+	#cloud-black {
+		
+	}
+}
+
+#cloud-login {
+	position:absolute;
+	width:50%;
+	height:50%;
+	left:0;
+	top:0;
+}
+
+#cloud-features {
+	position:absolute;
+	width:50%;
+	height:50%;
+	
+	left:800px;
+	top:800px;
+}
+
