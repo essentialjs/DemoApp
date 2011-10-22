@@ -3,7 +3,7 @@ body {
 	top:0; bottom:0;
 	left:0; right:0;
 }
-#cloud-bar {
+#cloud\/bar {
 	position:fixed;
 	left:0; right:0;
 	top:0; height: $fixed-bar-height;
@@ -15,7 +15,7 @@ body {
 	height:1000%;
 }
 
-#cloud-plans {
+#cloud\/plans {
 	position:absolute;
 	width:50%;
 	height:50%;
@@ -35,7 +35,7 @@ body {
 	}
 }
 
-#cloud-login {
+#cloud\/login {
 	position:absolute;
 	width:50%;
 	height:50%;
@@ -43,7 +43,7 @@ body {
 	top:0;
 }
 
-#cloud-features {
+#cloud\/features {
 	position:absolute;
 	width:50%;
 	height:50%;

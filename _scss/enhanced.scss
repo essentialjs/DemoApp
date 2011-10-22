@@ -1,6 +1,11 @@
 ---
 appcache: default
 ---
+
+$fixed-bar-height: 50px;
+
+@import cloud/cloud.scss;
+
 @media all and (min-width: 500px){ .. }
 @media all and (min-width: 620px){ .. }
 @media all and (min-width: 950px){ .. }
