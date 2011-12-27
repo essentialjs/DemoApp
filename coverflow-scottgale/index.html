@@ -1,0 +1,325 @@
+<html>
+	<head>
+		
+		<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+		<title>Coverflow Using CSS 3D Transforms Example</title>
+		<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.3.0/build/cssreset/reset-min.css">
+		<style type="text/css" media="screen">
+		body,html {
+			margin: 0;
+			padding: 0;
+			background: #000;
+			height: 100%;
+			color: #eee;
+			font-family: Arial;
+			font-size: 10pt;				
+		}
+
+		a {
+			color:#eee;
+			text-decoration:none;
+		}
+		
+		strong {
+			font-weight:bold;
+		}
+		
+		.mod {
+			clear:both;
+		}
+
+		.coverflow .hproducts {
+			height: 80px;
+			padding: 30px;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			width: 300%;
+		}
+
+		.coverflow .bd2 {
+			-webkit-perspective: 500px;
+			margin: 0;
+			height: 60%;
+			border: none;
+			overflow: hidden;
+			width: 100%;
+			position: relative;
+		}
+
+		.coverflow .slider {
+			position: absolute;
+			bottom: 5px;
+			left:0;
+			margin:0 10%;
+			width: 80%;
+			height: 19px;
+			background: url(files/scrollbar-left.png) no-repeat top left,
+						url(files/scrollbar-right.png) no-repeat top right,
+						url(files/scrollbar-center.png) repeat-x;
+		}
+		
+		* html .coverflow .slider {background:url(files/scrollbar-center.png) repeat-x;}
+
+		.coverflow .ui-slider-handle {
+			position: absolute;
+			cursor: pointer;
+			cursor: hand;
+			top: 0px;
+			left: 0px;
+			height: 100%;
+			width: 181px;
+			background: url(files/handle.png) no-repeat;
+
+		}
+
+		.hproducts .hproduct {
+			width: 170px;
+			float: left;
+			margin: 5px;
+			position: relative;
+			text-align:center;
+		}
+
+		.hproduct img {
+			width:100%;				
+			border: 1px solid #999;
+		}
+
+		.coverflow .hproduct img {
+			-webkit-box-reflect:
+				below 0px 
+				-webkit-gradient(linear, left top, left bottom, 
+					from( transparent ), color-stop(0.5, transparent), to( rgba(50,50,50,0.7) ) 
+				);				
+		}
+
+		.coverflow .fn, .coverflow .pricing {
+			display:none;
+		}
+
+		.coverflow .info {
+			position:absolute;
+			top:190px;
+			left:0px;
+			z-index:10000;
+			text-align:center;
+			width:100%;
+		}
+		
+		@media screen and (-webkit-min-device-pixel-ratio:0) {
+			.hproducts .hproduct {
+				height:225px;
+			}
+		}
+		
+		.description {
+			max-width:400px;
+			padding:1em;
+			float:left;
+		}
+		
+		.description h1 {
+			font-size:130%;
+			font-weight:bold;
+		}
+		
+		.description p {
+			margin-left:1em;
+		}
+		
+		nav {
+			float:right;
+			padding:1em;
+		}
+		
+		.bottom {
+			text-align:center;
+		}
+		
+		.csstransforms3d .no-webkit {
+			display:none;
+		}
+		
+		.touch .mobile {
+			display:none;
+		}
+		
+		.swipe {
+			display:none;
+		}
+		
+		.touch .swipe {
+			display:inline;
+		}
+		</style>
+<script type="text/javascript" src="files/jquery-1.js"></script>
+<script type="text/javascript" src="files/ui.core.js"></script>
+<script type="text/javascript" src="files/ui.js"></script>
+<script type="text/javascript" src="files/effects.js"></script>
+<script type="text/javascript" src="files/ui.coverflow.js"></script>
+<script type="text/javascript" src="files/modernizr-1.7.min.js"></script>
+
+								
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("div.hproducts").coverflow();
+			});
+			
+		</script>
+	</head>
+	<body>
+	
+	<div class="description">
+		<h1>Coverflow Using CSS 3D Transforms.</h1>
+		<p><span class="no-webkit">This demo works best in <strong>Chrome or Safari.</strong></span> <span class="mobile">This also works on iPhone, and iPad. Not yet tested on Android.</span> 
+		This will gracefully degrade for other browsers that don't support certain features. <span class="swipe">Swipe across to move back and forth.</span></p>
+	</div>
+	<nav>
+		<a href="http://scottgale.com/blog/coverflow-css-3d-transforms/2011/05/24/">&gt; How to Build the Coverflow</a><br/>
+		<a href="coverflow-scottgale.zip">&gt; Download the CSS Coverflow and experiment</a><br/>
+	</nav>
+
+  <div class="mod inventory-featured-default type-1">
+    <div class="top">
+      <div class="tl"></div>
+
+      <div class="tr"></div>
+    </div>
+
+    <div class="inner">
+      <div class="inner2">
+        <div class="hd">
+          <div class="hd2">
+            <h1></h1>
+          </div>
+        </div>
+
+        <div class="bd">
+          <div class="bd2">
+			<div class="hproducts">
+                <div class="hproduct auto">
+                  <div class="">
+                    <div class="media">
+                      <a href=
+                      "/new/Scion/2011-Scion-xD-709679d30a0a0064019acd1300e29ea1.htm"><img class="photo thumb"
+                      alt="" src=
+                      "files/1m.png" /></a>
+                    </div>
+
+                    <h1 class="fn h3"><a href=
+                    "/new/Scion/2011-Scion-xD-709679d30a0a0064019acd1300e29ea1.htm" rel=
+                    "product" class="url">2011 BMW 1 Series M Coupe</a></h1>
+
+                    <ul class="pricing">
+                      <li>
+                        <h2 class="price h3"><span class="value">$17,599</span></h2>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="hproduct auto">
+                  <div class="">
+                    <div class="media">
+                      <a href=
+                      "/new/Ford/2011-Ford-Edge-70966f8c0a0a0064019acd13a69b1135.htm"><img class="photo thumb"
+                      alt="" src=
+                      "files/z4.png" /></a>
+                    </div>
+
+                    <h1 class="fn h3"><a href=
+                    "/new/Ford/2011-Ford-Edge-70966f8c0a0a0064019acd13a69b1135.htm" rel=
+                    "product" class="url">2011 BMW Z4 Convertible</a></h1>
+
+                    <ul class="pricing">
+                      <li>
+                        <h2 class="price h3"><span class="value">$25,277</span></h2>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="hproduct auto">
+                  <div class="">
+                    <div class="media">
+                      <a href=
+                      "/new/Ford/2011-Ford-Edge-70966f530a0a0064019acd13eac2a992.htm"><img class="photo thumb"
+                      alt="" src=
+                      "files/m3.png" /></a>
+                    </div>
+
+                    <h1 class="fn h3"><a href=
+                    "/new/Ford/2011-Ford-Edge-70966f530a0a0064019acd13eac2a992.htm" rel=
+                    "product" class="url">2011 BMW M3 Convertible</a></h1>
+
+                    <ul class="pricing">
+                      <li>
+                        <h2 class="price h3"><span class="value">$25,443</span></h2>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="hproduct auto">
+                  <div class="">
+                    <div class="media">
+                      <a href=
+                      "/new/Ford/2011-Ford-Edge-70966f530a0a0064019acd13eac2a992.htm"><img class="photo thumb"
+                      alt="" src=
+                      "files/z4-2.png" /></a>
+                    </div>
+
+                    <h1 class="fn h3"><a href=
+                    "/new/Ford/2011-Ford-Edge-70966f530a0a0064019acd13eac2a992.htm" rel=
+                    "product" class="url">2011 BMW Z4 Convertible</a></h1>
+
+                    <ul class="pricing">
+                      <li>
+                        <h2 class="price h3"><span class="value">$25,443</span></h2>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="hproduct auto">
+                  <div class="">
+                    <div class="media">
+                      <a href=
+                      "/new/Ford/2011-Ford-Edge-70966d920a0a0064019acd13ebe5ff35.htm"><img class="photo thumb"
+                      alt="" src=
+                      "files/x6m.png" /></a>
+                    </div>
+
+                    <h1 class="fn h3"><a href=
+                    "/new/Ford/2011-Ford-Edge-70966d920a0a0064019acd13ebe5ff35.htm" rel=
+                    "product" class="url">2011 BMW X6 M Premium</a></h1>
+
+                    <ul class="pricing">
+                      <li>
+                        <h2 class="price h3"><span class="value">$25,277</span></h2>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+			</div>
+			<div class="info"></div>
+			<div class="slider ui-slider">
+				<a href="javascript:void(0)" style="cursor: default;"><div class="ui-slider-handle"></div></a>
+			</div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom">
+      <div class="bl"></div>
+			by <a href="http://scottgale.com/blog">Scott Gale</a><span class="no-webkit"> (try this in Chrome or Safari)</span>
+      <div class="br"></div>
+    </div>
+  </div>
+	
+  </body>
+</html>

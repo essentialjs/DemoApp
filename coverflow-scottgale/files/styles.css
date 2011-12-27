@@ -1,0 +1,89 @@
+body,html {
+	margin: 0;
+	padding: 0;
+	background: #000;
+	height: 100%;
+	color: #eee;
+	font-family: Arial;
+	font-size: 10pt;				
+}
+
+a {
+	color:#eee;
+	text-decoration:none;
+}
+
+.coverflow .hproducts {
+	height: 80px;
+	padding: 30px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 2000px;
+}
+
+.coverflow .bd2 {
+	-webkit-perspective: 400;
+	margin: 20px;
+	height: 300px;
+	border: none;
+	overflow: hidden;
+	width: 600px;
+	position: relative;
+}
+
+.coverflow .slider {
+	position: absolute;
+	bottom: 5px;
+	left: 30px;
+	width: 542px;
+	height: 19px;
+	background: url(files/productbrowser_scrollbar_20070622.png) no-repeat;
+}
+
+.coverflow .ui-slider-handle {
+	position: absolute;
+	cursor: pointer;
+	cursor: hand;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 181px;
+	background: url(files/handle.png) no-repeat;
+	
+}
+
+.hproducts .hproduct {
+	width: 170px;
+	height:250px;
+	float: left;
+	margin: 5px;
+	position: relative;
+	text-align:center;
+}
+
+.hproduct img {
+	width:100%;				
+	border: 1px solid #999;
+}
+
+.coverflow .hproduct img {
+	-webkit-box-reflect:
+		below 0px 
+		-webkit-gradient(linear, left top, left bottom, 
+			from( transparent ), color-stop(0.5, transparent), to( rgba(50,50,50,0.7) ) 
+		);				
+}
+
+.coverflow .fn, .coverflow .pricing {
+	display:none;
+}
+
+.coverflow .info {
+	position:absolute;
+	top:190px;
+	left:0px;
+	z-index:10000;
+	text-align:center;
+	width:100%;
+}
