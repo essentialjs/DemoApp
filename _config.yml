@@ -7,4 +7,7 @@ author: Henrik Vendelbo
 description: HTML5 Demo Application
 analytics_id: UA-22749258-4
 
-exclude: Library, Rakefile, README 
+exclude: Library, Rakefile, README
+
+# output: _output
+ 

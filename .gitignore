@@ -2,3 +2,4 @@
 *.pyc
 _server
 /testing.log
+_output/
