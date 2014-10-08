@@ -2,10 +2,10 @@
   "name": "demoapp",
   "version": "0.0.0",
   "dependencies": {
-    "topcoat": "~0.4.1",
     "requirejs": "~2.1.4",
     "modernizr": "~2.6.2",
-    "jquery": "~1.9.1"
+    "jquery": "~1.9.1",
+    "ionic": "~0.9.27"
   },
   "devDependencies": {}
 }
