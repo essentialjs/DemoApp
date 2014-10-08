@@ -36,10 +36,6 @@ module.exports = function (grunt) {
                 files: ['test/spec/{,*/}*.coffee'],
                 tasks: ['coffee:test']
             },
-            compass: {
-                files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
-                tasks: ['compass:server']
-            },
             livereload: {
                 options: {
                     livereload: LIVERELOAD_PORT
@@ -65,7 +61,7 @@ module.exports = function (grunt) {
                 }
             }
         },
-        
+
         connect: {
             options: {
                 port: 9000,
@@ -194,27 +190,6 @@ module.exports = function (grunt) {
                 }]
             }
         },
-        compass: {
-            options: {
-                sassDir: '<%= yeoman.app %>/styles',
-                cssDir: '.tmp/styles',
-                generatedImagesDir: '.tmp/images/generated',
-                imagesDir: '<%= yeoman.app %>/images',
-                javascriptsDir: '<%= yeoman.app %>/scripts',
-                /*fontsDir: '<%= yeoman.app %>/styles/fonts',*/
-                importPath: '<%= yeoman.app %>/bower_components',
-                httpImagesPath: '/images',
-                httpGeneratedImagesPath: '/images/generated',
-                httpFontsPath: '/styles/fonts',
-                relativeAssets: false
-            },
-            dist: {},
-            server: {
-                options: {
-                    debugInfo: true
-                }
-            }
-        },
         // not used since Uglify task does concat,
         // but still available if needed
         /*concat: {
@@ -252,7 +227,7 @@ module.exports = function (grunt) {
             }
         },
 
-        
+
         modernizr: {
 
             // Path to the build you're using for development.
@@ -389,21 +364,31 @@ module.exports = function (grunt) {
                     src: [
                         'generated/*'
                     ]
+                }, {
+                    expand: true,
+                    cwd: '<%= yeoman.app %>',
+                    dest: '<%= yeoman.dist %>',
+                    src: [
+                        'styles/vendor/topcoat/img/{,*/}*',
+                        'styles/vendor/topcoat/css/{,*/}*'
+                    ]
                 }]
             }
         },
         concurrent: {
             server: [
-                'coffee:dist',
-                'compass:server'
+                'coffee:dist'
+                //,
+                //'compass:server'
             ],
             test: [
-                'coffee',
-                'compass'
+                'coffee'
+                //,
+                //'compass'
             ],
             dist: [
                 'coffee',
-                'compass:dist',
+                //'compass:dist',
                 'imagemin',
                 'svgmin',
                 'htmlmin'
@@ -463,12 +448,18 @@ module.exports = function (grunt) {
         'test',
         'build'
     ]);
-    
+
     grunt.registerTask('screenshots', [
         'clean:server',
         'concurrent:server',
         'connect:livereload',
         'autoshot'
     ]);
-    
+
+    //TODO like Topcoat
+    grunt.registerTask('telemetry', '', function(platform, theme) {
+        if (chromiumSrc === "") grunt.fail.warn("Set CHROMIUM_SRC to point to the correct location\n");
+        grunt.task.run('check_chromium_src', 'perf:'.concat(platform || 'mobile').concat(':').concat(theme || 'light'), 'htmlmin:telemetry', 'copy:telemetry');
+    });
+
 };

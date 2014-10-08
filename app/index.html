@@ -15,107 +15,233 @@
         <script src="bower_components/modernizr/modernizr.js"></script>
         <!-- endbuild -->
 
-        <!-- build:css styles/vendor/foundation/stylesheets/foundation-min.css -->
-        <link rel="stylesheet" href="styles/vendor/foundation/stylesheets/foundation-min.css">
+        <!-- build:css styles/vendor/topcoat/css/topcoat-mobile-light.min.css -->
+        <link rel="stylesheet" href="styles/vendor/topcoat/css/topcoat-mobile-light.min.css">
         <!-- endbuild -->
 </head>
     <body>
-          <!-- Nav and Banner -->
-
-  <div class="row">
-    <div class="twelve columns">
-      <ul class="nav-bar">
-        <li><a href="#">Link 1</a></li>
-        <li><a href="#">Link 2</a></li>
-        <li><a href="#">Link 3</a></li>
-        <li><a href="#">Link 4</a></li>
-        <li><a href="#">Link 5</a></li>
-        <li><a href="#">Link 6</a></li>
-        <li><a href="#">Link 7</a></li>
-      </ul>
-
-      <!-- Main Banner Image - place in a paragraph to enforce the modular scale spacing -->
-      <p><img src="http://placehold.it/1000x400&amp;text=[banner img]"></p>
-    </div>
-  </div>
-
-  <!-- End Nav and Banner -->
+                        <h1 class=''>'Allo, 'Allo!</h1>
+                <p>You now have</p>
+                <ul>
+                    <li>HTML5 Boilerplate</li>
+                    <li>Topcoat</li>
+                    <li>RequireJS</li>
+                    <li>Fullscreen API snippet</li>
+                    <li>FastClick</li>
+                </ul>
+                <p>installed.</p>
+                <h3>Enjoy coding! - Yeoman</h3>
 
 
-  <!-- Main Content Section -->
+<div id="content" class="max-width">
+          <article id="button" class="component">
+            <header>
+              <h2>Button</h2>
+            </header>
+            <section class="component"><a class="topcoat-button">Button</a>
+<a class="topcoat-button is-active">Button</a>
+<a class="topcoat-button is-disabled">Button</a></section>
+          </article>
+          <article id="quiet-button" class="component">
+            <header>
+              <h2>Quiet Button</h2>
+            </header>
+            <section class="component"><a class="topcoat-button--quiet">Button</a>
+<a class="topcoat-button--quiet is-active">Button</a>
+<a class="topcoat-button--quiet is-disabled">Button</a></section>
 
-  <div class="row">
+          </article>
+          <article id="large-button" class="component">
+            <header>
+              <h2>Large Button</h2>
+            </header>
+            <section class="component"><a class="topcoat-button--large">Button</a>
+<a class="topcoat-button--large is-active">Button</a>
+<a class="topcoat-button--large is-disabled">Button</a></section>
 
-    <div class="eight columns">
-      <h4>This is a content section.</h4>
-      <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa. Boudin aliqua adipisicing rump corned beef.</p>
-      <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa. Boudin aliqua adipisicing rump corned beef.</p>
-      <p><a href="#" class="secondary small button">Next Page &rarr;</a></p>
-    </div>
+          </article>
+          <article id="large-quietbutton" class="component">
+            <header>
+              <h2>Large Quiet Button</h2>
+            </header>
+            <section class="component"><a class="topcoat-button--large--quiet">Button</a>
+<a class="topcoat-button--large--quiet is-active">Button</a>
+<a class="topcoat-button--large--quiet is-disabled">Button</a></section>
 
-    <div class="four columns">
+          </article>
+          <article id="call-toaction button" class="component">
+            <header>
+              <h2>Call To Action Button</h2>
+            </header>
+            <section class="component"><a class="topcoat-button--cta">Button</a>
+<a class="topcoat-button--cta is-active">Button</a>
+<a class="topcoat-button--cta is-disabled">Button</a></section>
 
-      <!-- Gallery sidebar with a block grid. Note: block grid items should be the same size for optimal results -->
+          </article>
+          <article id="large-callto action button" class="component">
+            <header>
+              <h2>Large Call To Action Button</h2>
+            </header>
+            <section class="component"><a class="topcoat-button--large--cta">Button</a>
+<a class="topcoat-button--large--cta is-active">Button</a>
+<a class="topcoat-button--large--cta is-disabled">Button</a></section>
 
-      <ul class="block-grid three-up">
-        <li><a href="#"><img src="http://placehold.it/120x120"></a></li>
-        <li><a href="#"><img src="http://placehold.it/120x120"></a></li>
-        <li><a href="#"><img src="http://placehold.it/120x120"></a></li>
-        <li><a href="#"><img src="http://placehold.it/120x120"></a></li>
-        <li><a href="#"><img src="http://placehold.it/120x120"></a></li>
-        <li><a href="#"><img src="http://placehold.it/120x120"></a></li>
-      </ul>
-    </div>
+          </article>
+          <article id="icon-button" class="component">
+            <header>
+              <h2>Icon Button</h2>
+            </header>
+            <section class="component"><a class="topcoat-icon-button">
+<span class="topcoat-icon topcoat-icon--menu-stack"></span>
+</a>
 
-  </div>
+<a class="topcoat-icon-button is-active">
+<span class="topcoat-icon topcoat-icon--menu-stack"></span>
+</a>
 
+<a class="topcoat-icon-button is-disabled">
+<span class="topcoat-icon topcoat-icon--menu-stack"></span>
+</a></section>
 
-  <!-- Call to Action Panel -->
-  <div class="row">
-    <div class="twelve columns">
+          </article>
+          <article id="quiet-iconbutton" class="component">
+            <header>
+              <h2>Quiet Icon Button</h2>
+            </header>
+            <section class="component"><a class="topcoat-icon-button--quiet">
+<span class="topcoat-icon topcoat-icon--menu-stack"></span>
+</a>
 
-      <div class="panel">
-        <h4>Get in touch!</h4>
+<a class="topcoat-icon-button--quiet is-active">
+<span class="topcoat-icon topcoat-icon--menu-stack"></span>
+</a>
 
-        <div class="row">
-          <div class="nine columns">
-            <p>We'd love to hear from you, you attractive person you.</p>
-          </div>
-          <div class="three columns">
-            <a href="#" class="radius button right">Contact Us</a>
-          </div>
+<a class="topcoat-icon-button--quiet is-disabled">
+<span class="topcoat-icon topcoat-icon--menu-stack"></span>
+</a></section>
+
+          </article>
+          <article id="large-iconbutton" class="component">
+            <header>
+              <h2>Large Icon Button</h2>
+            </header>
+            <section class="component"><a class="topcoat-icon-button--large">
+<span class="topcoat-icon--large topcoat-icon--menu-stack"></span>
+</a>
+
+<a class="topcoat-icon-button--large is-active">
+<span class="topcoat-icon--large topcoat-icon--menu-stack"></span>
+</a>
+
+<a class="topcoat-icon-button--large is-disabled">
+<span class="topcoat-icon--large topcoat-icon--menu-stack"></span>
+</a></section>
+
+          </article>
+          <article id="large-quieticon button" class="component">
+            <header>
+              <h2>Large Quiet Icon Button</h2>
+            </header>
+            <section class="component"><a class="topcoat-icon-button--large--quiet">
+<span class="topcoat-icon--large topcoat-icon--menu-stack"></span>
+</a>
+
+<a class="topcoat-icon-button--large--quiet is-active">
+<span class="topcoat-icon--large topcoat-icon--menu-stack"></span>
+</a>
+
+<a class="topcoat-icon-button--large--quiet is-disabled">
+<span class="topcoat-icon--large topcoat-icon--menu-stack"></span>
+</a></section>
+
+          </article>
+          <article id="list" class="component">
+            <header>
+              <h2>List</h2>
+            </header>
+            <section class="component"><div class="topcoat-list__container">
+<h3 class="topcoat-list__header">Category</h3>
+<ul class="topcoat-list">
+<li class="topcoat-list__item">
+Item
+</li>
+<li class="topcoat-list__item">
+Item
+</li>
+<li class="topcoat-list__item">
+Item
+</li>
+</ul>
+</div></section>
+
+          </article>
+          <article id="navigation-bar" class="component">
+            <header>
+              <h2>Navigation Bar</h2>
+            </header>
+            <section class="component"><div class="topcoat-navigation-bar">
+<div class="topcoat-navigation-bar__item left quarter">
+<a class="topcoat-icon-button--quiet">
+<span class="topcoat-icon topcoat-icon--menu-stack"></span>
+</a>
+</div>
+<div class="topcoat-navigation-bar__item center half">
+<h1 class="topcoat-navigation-bar__title">Header</h1>
+</div>
+<div class="topcoat-navigation-bar__item right quarter">
+<a class="topcoat-icon-button--quiet">
+<span class="topcoat-icon topcoat-icon--edit"></span>
+</a>
+</div>
+</div></section>
+
+          </article>
+          <article id="search-input" class="component">
+            <header>
+              <h2>Search Input</h2>
+            </header>
+            <section class="component"><input type="search" value="" placeholder="search" class="topcoat-search-input">
+<input type="search is-disabled" value="" placeholder="search" class="topcoat-search-input"></section>
+
+          </article>
+          <article id="large-searchinput" class="component">
+            <header>
+              <h2>Large Search Input</h2>
+            </header>
+            <section class="component"><input type="search" value="" placeholder="search" class="topcoat-search-input--large">
+<input type="search" value="" placeholder="search" class="topcoat-search-input--large .is-disabled"></section>
+
+          </article>
+          <article id="text-input" class="component">
+            <header>
+              <h2>Text Input</h2>
+            </header>
+            <section class="component"><input type="text" class="topcoat-text-input" value="" placeholder="text">
+<input type="text" class="topcoat-text-input is-disabled" value="" placeholder="text"></section>
+
+          </article>
+          <article id="large-textinput" class="component">
+            <header>
+              <h2>Large Text Input</h2>
+            </header>
+            <section class="component"><input type="text" class="topcoat-text-input--large" value="" placeholder="text">
+<input type="text" class="topcoat-text-input--large is-disabled" value="" placeholder="text"></section>
+
+          </article>
+          <article id="topcoat-textarea" class="component">
+            <header>
+              <h2>TopCoat Textarea</h2>
+            </header>
+            <section class="component"><textarea class="topcoat-textarea" rows="6" cols="36" placeholder="Textarea"></textarea></section>
+
+          </article>
+          <article id="topcoat-largetextarea" class="component">
+            <header>
+              <h2>Topcoat Large Textarea</h2>
+            </header>
+            <section class="component"></section>
+          </article>
         </div>
-      </div>
-
-    </div>
-  </div>
-
-
-  <!-- Footer -->
-
-  <footer class="row">
-    <div class="twelve columns">
-      <hr>
-      <div class="row">
-        <div class="six columns">
-          <p>&copy; Copyright no one at all. Go to town.</p>
-        </div>
-        <div class="six columns">
-          <ul class="link-list right">
-            <li><a href="#">Link 1</a></li>
-            <li><a href="#">Link 2</a></li>
-            <li><a href="#">Link 3</a></li>
-            <li><a href="#">Link 4</a></li>
-            <li><a href="#">Link 5</a></li>
-            <li><a href="#">Link 6</a></li>
-            <li><a href="#">Link 7</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-
 
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
@@ -131,11 +257,6 @@
 
         <!-- build:js scripts/main.js -->
         <script data-main="scripts/main" src="bower_components/requirejs/require.js"></script>
-        <!-- endbuild -->
-
-        <!-- build:js scripts/async-local-storage.js -->
-        <script src="scripts/async.localStorage.js"></script>
-        <script src="scripts/async.localStorage.examples.js"></script>
         <!-- endbuild -->
 
         <!-- build:js scripts/fullscreensnippet.js -->
