@@ -1,0 +1,9 @@
+{
+	"title": "DCC Connection Client",
+	"sdkClient": "SDK",
+	"welcome": [
+		"strong Willkommen zum ",
+    "| DCC Connection Client ",
+    "span.label.label-warning DCC v__version__"
+	]
+}

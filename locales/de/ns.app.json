@@ -1,0 +1,21 @@
+{
+	"deviceTypeTitle": {
+		"chw4000": "Tischleser B-web 91 08 ATOL / LEGIC CHW-4000",
+		"bnet9107": "Tischleser B-web 91 08 LEGIC / B-Net 91 07",
+		"bweb9108": "Tischleser B-web 91 08 MIFARE"
+	},
+	"deviceType": {
+		"connectByPortname": "mit dem Portnamen verbinden",
+		"connect": "$t(ns.common:connect)",
+		"disconnect": "$t(ns.common:disconnect)",
+		"driverNotLoaded": "Der Treiber für dieses Gerät konnte nicht geladen werden!"
+	},
+	"device": {
+		"connect": "$t(ns.common:connect)",
+		"disconnect": "$t(ns.common:disconnect)",
+		"portname": "Portname",
+		"locationId": "Location ID",
+		"serialNumber": "Seriennummer",
+		"firmwareVersion": "Firmware Version"
+	}
+}
