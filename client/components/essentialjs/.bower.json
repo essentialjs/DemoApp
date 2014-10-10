@@ -1,0 +1,14 @@
+{
+  "name": "essentialjs",
+  "homepage": "https://github.com/essentialjs/EssentialJS",
+  "_release": "04ba131ec4",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "04ba131ec4b1f6d94dd5e750272ce337b165559f"
+  },
+  "_source": "git://github.com/essentialjs/EssentialJS.git",
+  "_target": "*",
+  "_originalSource": "essentialjs",
+  "_direct": true
+}

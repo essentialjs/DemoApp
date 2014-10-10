@@ -1,0 +1,15 @@
+{
+  "name": "json-serialize",
+  "homepage": "https://github.com/kmalakoff/json-serialize",
+  "version": "1.1.2",
+  "_release": "1.1.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.1.2",
+    "commit": "93a682d7f2edb0ad121172ceacd90e12e2450586"
+  },
+  "_source": "git://github.com/kmalakoff/json-serialize.git",
+  "_target": "~1.1.2",
+  "_originalSource": "json-serialize",
+  "_direct": true
+}

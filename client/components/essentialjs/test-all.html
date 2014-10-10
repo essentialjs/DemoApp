@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" essential-testing="yes">
+<head>
+	<meta content="IE=10" http-equiv="X-UA-Compatible">
+	<meta name="locale cookie" content="locale">
+
+	<title>QUnit Tests</title>
+	<link rel="stylesheet" href="test/qunit/qunit.css" media="screen">
+
+<!-- reference your own javascript files here -->
+
+<script type="text/javascript" src="js/modernizr-prefix.js" data-save-as="modernizr+essential+json+clipboard"></script>
+<script type="text/javascript" src="js/modernizr.min.js" data-save-as="modernizr+essential+json+clipboard"></script>
+<script type="text/javascript" src="js/json2.js" data-save-as="modernizr+essential+json+clipboard"></script>
+<script type="text/javascript" src="js/resolver.js" data-save-as="essential modernizr+essential+json+clipboard"></script>
+<script type="text/javascript" src="js/generator.js" data-save-as="essential modernizr+essential+json+clipboard"></script>
+<script type="text/javascript" src="js/essentialns.js" data-save-as="essential modernizr+essential+json+clipboard"></script>
+<script type="text/javascript" src="js/dom.js" data-save-as="essential modernizr+essential+json+clipboard"></script>
+<script type="text/javascript" src="js/doc.js" data-save-as="essential modernizr+essential+json+clipboard"></script>
+<script type="text/javascript" src="js/page.js" data-save-as="essential modernizr+essential+json+clipboard"></script>
+<script type="text/javascript" src="js/xhr.js" data-save-as="essential modernizr+essential+json+clipboard"></script>
+<script type="text/javascript" src="js/elements.js" data-save-as="essential modernizr+essential+json+clipboard"></script>
+<script type="text/javascript" src="js/fields.js" data-save-as="essential modernizr+essential+json+clipboard"></script>
+<script type="text/javascript" src="js/roles.js" data-save-as="essential modernizr+essential+json+clipboard"></script>
+<script src="test/configured.js"></script>
+
+<script type="application/config">
+declare("logo",{"charset": "utf-8","glue":"to-other"});
+declare("login",{"charset": "utf-8","position":"undefined"});
+declare("launched",{"charset": "utf-8"});
+declare("test-scripted",{"abc":"def", "from-script":true, "charset": "utf-8"});
+declare("test-both-ways",{"test":"test", "charset": "utf-8"});
+declare("test-scripted.username",{ "default-value":"123" });
+declare("declared-in-head",{"a":"a","b":"b"});
+</script>
+
+<script type="text/javascript" src="app/js/jquery-1.7.2.min.js"></script>
+<!-- test runner files -->
+	<script src="test/qunit/qunit.js"></script>
+	<script src="test/sinon.js"></script>
+	<script src="test/sinon-ie-1.4.2.js"></script>
+	<!-- // <script src="test/sinon-qunit-1.0.0.js"></script> -->
+	<!-- // <script src="test/_utils.js"></script> -->
+	<script src="test/dom.js"></script>
+	<script src="test/resolver.js"></script>
+	<script src="test/generator.js"></script>
+	<script src="test/types.js"></script>
+	<script src="test/console.js"></script>
+	<script src="test/translation.js"></script>
+	<script src="test/config.js"></script>
+	<script src="test/pages.js"></script>
+	<!--
+	-->
+	<script src="test/launching.js"></script>
+	<script src="test/elements.js"></script>
+	<!-- // <script src="test/fields.js"></script> -->
+	// <script src="test/stateful.js"></script>
+	<script src="test/tests.js"></script>
+
+	<style>
+	template { visibility: hidden !important;}
+	br.page { break-after: always; page-break-after: always;}
+	</style>
+
+</head>
+<body class="flora">
+	<h1 id="qunit-header">QUnit Test Suite</h1>
+	<h2 id="qunit-banner"></h2>
+	<div id="qunit-testrunner-toolbar"></div>
+	<h2 id="qunit-userAgent"></h2>
+	<ol id="qunit-tests"></ol>
+	<div id="qunit-fixture">test markup</div>
+
+	<script type="application/config">
+	declare("declared-in-body",{"a":"a","b":"b"});
+	</script>
+	<template id="abcd">hello<span>there</span>how<b>are</b>you doing</template>
+	</body>
+</html>

@@ -12,3 +12,6 @@
         grunt serve dist
         grunt serve 
 
+## Ideas
+
+generator-yeogurt

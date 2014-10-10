@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]--><!--[if lt IE 7 ]><html class="no-js ie6" lang="en"><![endif]--><!--[if IE 7 ]><html class="no-js ie7" lang="en"><![endif]--><!--[if IE 8 ]><html class="no-js ie8" lang="en"><![endif]--><!--[if (gte IE 9)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]--><head>
+  <meta charset="utf-8">
+  <meta content="chrome=1,IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" name="SKYPE_TOOLBAR">
+	<title>Frontend</title>
+  <meta content="Novo Bank" name="description">
+  <meta content="Henrik Vendelbo" name="author">
+
+  <meta name="text selection" content="input textarea">
+	<meta name="enhanced roles" content="dialog toolbar menubar menu navigation spinner application scrolled templated table">
+  <meta name="enhanced document tags" content="body" purpose="Elements that are enhanced if they dont have a role"> 
+  <meta name="enhanced tags in document" content="output" purpose="tags in the body or other document tags that will be enhanced with default handlers">
+	
+  <base href="/app/">
+	<link rel="stylesheet" href="css/basic.css" media="screen">
+  <link rel="stylesheet" href="css/enhanced.css" media="screen">
+
+	<script type="text/javascript" src="../js/modernizr-prefix.js"></script>
+	<script type="text/javascript" src="../js/modernizr.min.js"></script>
+	<script type="text/javascript" src="../js/json2.js"></script>
+	<script type="text/javascript" src="../js/resolver.js"></script>
+  <script type="text/javascript" src="../js/generator.js"></script>
+	<script type="text/javascript" src="../js/essentialns.js"></script>
+  <script type="text/javascript" src="../js/dom.js"></script>
+  <script type="text/javascript" src="../js/doc.js"></script>
+  <script type="text/javascript" src="../js/page.js"></script>
+	<script type="text/javascript" src="../js/xhr.js"></script>
+	<script type="text/javascript" src="../js/elements.js"></script>
+  <script type="text/javascript" src="../js/roles.js"></script>
+  <script type="text/javascript" src="../js/configured.js"></script>
+  <script type="text/javascript" src="js/spin.min.js"></script>
+
+  <script type="text/javascript" src="js/demo-logging.js"></script>
+
+  <script type="text/javascript" src="js/early.js"></script>
+
+  <script subpage="false">(function(){
+	  //Resolver("page").set(["state","connected"],false);
+	  Resolver("page").set(["state","authenticated"],false); //assume that login page passed
+	  Resolver("page").set(["state","authorised"],false);
+	  Resolver("page").set(["state","configured"],false);
+    //Resolver("essential")("openWindow")("index.html","util",{ glueRight:true, glueHeight:true });
+    Resolver("essential")("openWindow")("/from-config/side","util",{ glueRight:true, glueHeight:true });	
+  })();
+  </script>
+	<script src="js/auth-state.js?cachebuster=0" type="text/javascript" id="cookie-reload" subpage="false"></script>
+
+  <link rel="preload" type="text/javascript" lang="en" src="js/en.translations.js">
+  <link rel="preload" type="text/javascript" lang="de" src="js/de.translations.js">
+  <link rel="preload" type="text/javascript" lang="de-CH" src="js/de_CH.translations.js">
+
+  <link rel="preload" src="js/jquery-1.7.2.min.js" type="text/javascript">
+
+  <link rel="load" type="text/javascript" src="js/knockout.js">
+  <link rel="load" type="text/javascript" src="js/raphael.min.js" name="raphael">
+  <link rel="preload" type="text/javascript" src="js/raphael-resources.js">
+  <link rel="load" type="text/javascript" src="js/frontend.js" subpage="false">
+
+  <script type="application/config">
+    declare("logo",{"charset": "utf-8"});
+    declare("login",{"charset": "utf-8"});
+    declare("launched",{"charset": "utf-8"});
+
+    declare("main-stage",{"area-names": ["intro","designer", "explorer","history"], "introduction-area":"intro", "authenticated-area":"explorer", "layouter": "area-stage"});
+
+    page("/from-config/side",{ "track main":true },'<h1>Demo</h1><p>This is a sample side window.</p>');
+  </script>
+
+</head>
+<body class="loading">
+  <div role="template" data-role="'id':'panel'">
+
+    <section class="mock-navigate" role="adorned" data-role="'laidout':'section','glue':'left'">
+
+      <button onclick="this.parentNode.stateful.toggle('state.expanded');" rel="adornment">*</button>
+
+      <div>
+        <div role="scrolled" data-role='"obscured":true'>
+
+      <p style="width:100px">
+        sdfsdf
+        sdf
+        sdf
+        dsf
+        <div style="width:100px">
+          <button onclick="this.parentNode.style.width = this.parentNode.offsetWidth>=200?'100px':'200px'">Flip size</button>
+        </div>
+
+      </p>
+
+<!-- start slipsum code -->
+
+<h3>I'm serious as a heart attack</h3>
+Look, just because I don't be givin' no man a foot massage don't make it right for Marsellus to throw Antwone into a glass motherfuckin' house, fuckin' up the way the nigger talks. Motherfucker do that shit to me, he better paralyze my ass, 'cause I'll kill the motherfucker, know what I'm sayin'?
+
+<h3>I can do that</h3>
+Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I'm in a transitional period so I don't wanna kill you, I wanna help you. But I can't give you this case, it don't belong to me. Besides, I've already been through too much shit this morning over this case to hand it over to your dumb ass.
+
+<h3>Uuummmm, this is a tasty burger!</h3>
+Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're in a toy store, because you're here shopping for an infant named Jeb.
+
+<!-- please do not remove this line -->
+
+<div style="display:none;">
+<a href="http://slipsum.com">lorem ipsum</a></div>
+
+<!-- end slipsum code -->
+        </div>
+      </div>
+
+    </section>
+    <section class="mock-table" role="not-adorned" data-role="'laidout':'section'" aria-expanded="true">
+      <div>
+        <div role="scrolled" data-role='"obscured":false'>
+        <table>
+          <tr><th>A</th><th>B</th><th>C</th><th>D</th> <th>A</th><th>B</th><th>C</th><th>D</th> <th>A</th><th>B</th><th>C</th><th>D</th> </tr>
+          <tr><td>0</td><td>1</td><td>2</td><td>3</td> <td>0</td><td>1</td><td>2</td><td>3</td> <td>0</td><td>1</td><td>2</td><td>3</td> </tr>
+          <tr><td>0</td><td>1</td><td>2</td><td>3</td> <td>0</td><td>1</td><td>2</td><td>3</td> <td>0</td><td>1</td><td>2</td><td>3</td> </tr>
+          <tr><td>0</td><td>1</td><td>2</td><td>3</td> <td>0</td><td>1</td><td>2</td><td>3</td> <td>0</td><td>1</td><td>2</td><td>3</td> </tr>
+          <tr><td>0</td><td>1</td><td>2</td><td>3</td> <td>0</td><td>1</td><td>2</td><td>3</td> <td>0</td><td>1</td><td>2</td><td>3</td> </tr>
+          <tr><td>0</td><td>1</td><td>2</td><td>3</td> <td>0</td><td>1</td><td>2</td><td>3</td> <td>0</td><td>1</td><td>2</td><td>3</td> </tr>
+          <tr><td>0</td><td>1</td><td>2</td><td>3</td> <td>0</td><td>1</td><td>2</td><td>3</td> <td>0</td><td>1</td><td>2</td><td>3</td> </tr>
+          <tr><td>0</td><td>1</td><td>2</td><td>3</td> <td>0</td><td>1</td><td>2</td><td>3</td> <td>0</td><td>1</td><td>2</td><td>3</td> </tr>
+          <tr><td>0</td><td>1</td><td>2</td><td>3</td> <td>0</td><td>1</td><td>2</td><td>3</td> <td>0</td><td>1</td><td>2</td><td>3</td> </tr>
+          <tr><td>0</td><td>1</td><td>2</td><td>3</td> <td>0</td><td>1</td><td>2</td><td>3</td> <td>0</td><td>1</td><td>2</td><td>3</td> </tr>
+          <tr><td>0</td><td>1</td><td>2</td><td>3</td> <td>0</td><td>1</td><td>2</td><td>3</td> <td>0</td><td>1</td><td>2</td><td>3</td> </tr>
+          <tr><td>0</td><td>1</td><td>2</td><td>3</td> <td>0</td><td>1</td><td>2</td><td>3</td> <td>0</td><td>1</td><td>2</td><td>3</td> </tr>
+          <tr><td>0</td><td>1</td><td>2</td><td>3</td> <td>0</td><td>1</td><td>2</td><td>3</td> <td>0</td><td>1</td><td>2</td><td>3</td> </tr>
+          <tr><td>0</td><td>1</td><td>2</td><td>3</td> <td>0</td><td>1</td><td>2</td><td>3</td> <td>0</td><td>1</td><td>2</td><td>3</td> </tr>
+          <tr><td>0</td><td>1</td><td>2</td><td>3</td> <td>0</td><td>1</td><td>2</td><td>3</td> <td>0</td><td>1</td><td>2</td><td>3</td> </tr>
+          <tr><td>0</td><td>1</td><td>2</td><td>3</td> <td>0</td><td>1</td><td>2</td><td>3</td> <td>0</td><td>1</td><td>2</td><td>3</td> </tr>
+          <tr><td>0</td><td>1</td><td>2</td><td>3</td> <td>0</td><td>1</td><td>2</td><td>3</td> <td>0</td><td>1</td><td>2</td><td>3</td> </tr>
+        </table>
+        </div>
+      </div>
+    </section>
+    <section class="mock-detail" role="adorned" data-role="'laidout':'section','glue':'right'">
+
+      <button onclick="this.parentNode.stateful.toggle('state.expanded');" rel="adornment">*</button>
+
+      <p style="width:80px">
+        sdfsdf
+        sdf
+        sdf
+        dsf
+        <div style="width:100px">
+          <button onclick="this.parentNode.style.width = this.parentNode.offsetWidth>=200?'80px':'200px'">Flip size</button>
+        </div>
+
+      </p>
+
+    </section>
+    <section class="extra-info" role="adorned" data-role="'laidout':'section','glue':'right'">
+
+      <button onclick="this.parentNode.stateful.toggle('state.expanded');" rel="adornment">*</button>
+
+      <ul style="width:120px">
+        <li>ueueueu</li>
+        <li>ueueueu</li>
+        <li>ueueueu</li>
+        <li>ueueueu</li>
+        <li>ueueueu</li>
+        <li>ueueueu</li>
+        <li>ueueueu</li>
+        <li>ueueueu</li>
+      </ul>
+    </section>
+  </div>
+
+  <div id="menu-driven">
+    
+    <article role="presentation" id="main-stage">
+      <div class="aSide leftSide">
+        <header><nav role="tab">Main<button role="close"></button></nav></header>
+
+        <div class="panel" role="templated" data-role="'template':'panel','layouter':'multisection'"></div>
+
+      </div>
+      <div class="aSide rightSide" role="navigation">
+        <details>
+          <summary>Overview</summary>
+          <div>
+            <button>One</button><button>Two</button><button>Three</button>
+          </div>
+        </details>
+
+        <details>
+          <summary>News Stream</summary>
+          <div>
+          </div>
+        </details>
+
+        <details>
+          <summary>Monitoring</summary>
+          <div>
+          </div>
+        </details>
+
+        <details>
+          <summary>Diagram</summary>
+          <div>
+          </div>
+        </details>
+      </div>
+
+      <div id="pos-info"></div>
+    </article>
+
+   <header>
+   	<nav action="navigation/logo" role="navigation">
+      <button name="menu" role="button"></button>
+
+    </nav>
+    <nav action="navigation/application" role="navigation">
+      <button name="designer" role="button"><span class="icon"></span><label>Designer</label></button>
+      <button name="explorer" role="button"><span class="icon"></span><label>Explorer</label></button>
+      <button name="ongoing" role="button"><span class="icon"></span><label>Ongoing</label></button>
+      <button name="history" role="button"><span class="icon"></span><label>History</label></button>
+
+      <a href="pages/scrolling.html" rel="subpage" role="link">Scrolling</a>
+    </nav>
+
+    <nav action="navigation/account" data-role='"templateId":"account", "presentationModel":"app.account.Account"' id="account" role="navigation">
+      <button name="logout">Logout</button>
+
+      <menu actions="navigation/menu" role="menu">
+        <command name="preferences" label="Preferences">
+        <command name="confidential" label="Show/Hide Confidential">
+        <command name="password" label="Change Password">
+        <command name="logout" label="Logout">
+      </menu>
+    </nav>
+
+   </header>
+   <aside id="warnings-and-alerts" role="toolbar" action="info/alerts">
+   </aside>
+   <aside class="leftmenu">
+   </aside>
+
+  </div>
+
+  <nav id="cpny-logo">
+  	<figure name="get-started" role="img">
+      <script type="application/init">
+      require("raphael");
+      defineLogo(parentElement);
+      </script>
+
+    </figure> 
+	<span><h1>Essential<br/>JavaScript</h1></span>
+  </nav>
+
+  <nav id="app-logo">EssentialJS
+  </nav>
+  <footer>© Right Here Inc
+  </footer>
+  
+  <div id="loginShield">
+  </div>
+
+  <div class="loading-indicator" data-role="'zIndex':20" role="spinner">
+  </div>
+  <output data-proxy="html: body.connection.loadingProgress" id="loadingProgress"></output>
+
+  <nav role="navigation" action="navigation/lang"> 
+    <a name="en">English</a> ◦ 
+    <a name="de">Deutch</a> ◦  
+    <a name="fr">Francais</a> 
+  </nav>
+  <script type="text/javascript">
+  Resolver("essential")("DialogAction").variant("navigation/lang",Generator(
+    function(){},Resolver("essential")("DialogAction"),
+    {
+      "prototype": {
+        "en": function(){ 
+          Resolver("translations").set("locale","en"); 
+        },
+        "de": function(){ 
+          Resolver("translations").set("locale","de"); 
+        },
+        "fr": function(){ 
+          Resolver("translations").set("locale","fr"); 
+        }
+      }
+    }));
+  </script>
+
+  <div id="sessionBadge">
+   <form action="dialogs/login" autocomplete="off" id="login" method="client" name="login" role="dialog">
+   	<div class="connection-status">
+   		<div class="inner"></div>
+    </div>
+
+	<h1></h1>
+	<output name="loginErrors">The username or password you entered is incorrect, please try again</output>
+
+	<label class="details"><span lang="en">User Name</span><span lang="de">Benutzer</span><span lang="fr">Utilisateur</span></label>
+	<input autofocus="" maxlength="20" name="j_username" type="text">
+
+	<label class="details password"><span lang="en">Password</span><span lang="de">Passwort</span><span lang="fr">Mot de passe</span></label>
+	<input maxlength="20" name="j_password" type="password">
+
+  <div role="note" class="supportDetails">
+  	<h5 name="forgottenPassword" onclick="this.parentNode.stateful.toggle('state.expanded');">
+      <span lang="en">Can't access your account?</span>
+      <span lang="de">Problemen mit den login?</span>
+      <span lang="fr">Voudrai aide?</span>
+    </h5>
+
+    <p lang="en">
+      contact@essentialjs.com<br>
+      +44 80 80 80 80
+    </p>
+    <p lang="de">
+      contact@essentialjs.com<br>
+      +44 80 80 80 80
+    </p>
+    <p lang="fr">
+      contact@essentialjs.com<br>
+      +44 80 80 80 80
+    </p>
+  </div>
+
+	<button name="login" type="submit">Login</button>
+
+   </form>
+   <form action="dialogs/launched" autocomplete="off" id="launched" method="client" name="launched" 
+   	role="dialog">
+   		<h3>Sample User One</h3>
+		<button name="logout" type="submit">X</button>
+   </form>
+  </div>
+
+	loading state determined when DOM ready reflecting outstanding scripts/config.
+
+	when loading is done, when page is launching, when page is launched
+	the unenhanced roles are enhanced and outstanding page 
+	lifecycle generators are instantiated.
+
+	between loading done and page launching
+	outstanding page lifecycle generators are instantiated.
+
+	live state
+
+	live state is set after 60ms or when page onload.
+
+	when live state is hit
+	initial active area based on authenticated
+	unless an active area was already set.
+
+
+	body.class
+
+	reflect state on body at livepage, and onwards
+	after live state and loading finished.
+
+	note:
+
+	post processing of scripts can add configuration to fetch going back to 
+	the loading phase in this case configured should be set to false so the
+	post load configuration can be revisited after the config is fetched.
+
+
+  Avoiding memory leaks
+
+  The library will clean up automatically when the page is unloaded. In 
+  general you should not see any significant memory leaks in modern browsers.
+
+  To avoid them in older browsers, especially Internet Explorer you should 
+  take special care to call destroy on unnamed resolvers that you create
+  yourself.
+
+
+  Loading stored resolver data declared after load
+
+  The references defined while initial scripts are loaded can be read from
+  previously stored data through the `stored` method.
+
+  Once the page is completed the data for these are read and applied. If you 
+  define a reference as stored after this point it will be immediately loaded.
+
+  This way it doesn't matter where you define that a reference is initialised
+  with a previously stored data set. It will be loaded by the time the page
+  is launched.
+
+
+  Page singletons used in roles early
+
+  Whenever you use a page singleton you should fetch it by calling its generator.
+  If you do this while loading scripts you will get the usual problems with
+  singletons. So you want to wait until constructors or role enhancers are run.
+
+  This way the order is irrelevant. If the document DOM is ready and the roles
+  and singletons are being constructed. Anything needing a singleton calls the 
+  generator and the instance is returned. The only thing you have to avoid is
+  circular dependencies, and your loading and construction can be nicely 
+  decoupled.
+
+  Named Raphäel Images
+
+  If you put `role="img"` on an element that isn't and IMG tag, for instance a
+  figure tag, and give it a name, it can be enhanced with a named raphael image.
+
+      Resolver("essential").set("images.my_logo",'M16,1.466C7.973,1.466,1.466,7.973,1.466,16c0,8.027,6.507,14.534,14.534,14.534c8.027,0,14.534-6.507,14.534-14.534C30.534,7.973,24.027,1.466,16,1.466z M17.328,24.371h-2.707v-2.596h2.707V24.371zM17.328,19.003v0.858h-2.707v-1.057c0-3.19,3.63-3.696,3.63-5.963c0-1.034-0.924-1.826-2.134-1.826c-1.254,0-2.354,0.924-2.354,0.924l-1.541-1.915c0,0,1.519-1.584,4.137-1.584c2.487,0,4.796,1.54,4.796,4.136C21.156,16.208,17.328,16.627,17.328,19.003z');
+
+  This registers a questionmark icon which will be rendered whereever you place
+  `<figure name="my_logo" role="img"></figure>`
+
+</body>
+</html>

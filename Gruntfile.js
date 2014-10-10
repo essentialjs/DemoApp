@@ -20,7 +20,8 @@ module.exports = function (grunt) {
 
     // configurable paths
     var yeomanConfig = {
-        app: 'app',
+        'site': 'site',
+        app: 'client',
         dist: 'dist'
     };
 
@@ -231,7 +232,7 @@ module.exports = function (grunt) {
         modernizr: {
 
             // Path to the build you're using for development.
-            "devFile" : "<%= yeoman.app %>/bower_components/modernizr/modernizr.js",
+            "devFile" : "<%= yeoman.app %>/components/modernizr/modernizr.js",
 
             // Path to save out the built file.
             "outputFile" : "<%= yeoman.dist %>/scripts/modernizr.js",
