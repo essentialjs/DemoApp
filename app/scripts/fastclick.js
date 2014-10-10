@@ -738,7 +738,7 @@ FastClick.attach = function(layer) {
 if (typeof define !== 'undefined' && define.amd) {
     // AMD. Register as an anonymous module.
 
-    define("fastclick", ["fastclick"]);
+    define('fastclick', ['fastclick']);
 /*
     define(function() {
         'use strict';

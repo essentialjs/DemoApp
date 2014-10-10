@@ -26,7 +26,7 @@ function fullScreenElement() {
     return document.webkitFullScreenElement || document.webkitCurrentFullScreenElement || document.mozFullScreenElement || document.fullScreenElement;
 }
 
-var el = document.getElementById("fullscreenTest");
+var el = document.getElementById('fullscreenTest');
 
 el.requestFullScreen = el.webkitRequestFullScreen || el.mozRequestFullScreen || el.requestFullScreen;
 
