@@ -5,7 +5,7 @@ var async = require('async'),
     jade = require('jade'),
     JSONS = require('json-serialize'),
     webserver = require('../lib/webserver'),
-    socketserver = require('../lib/socketserver'),
+    //socketserver = require('../lib/socketserver'),
     options = require('settings'),
     dive = require('../lib/util/path').dive,
     logger = require('../lib/logging');
@@ -13,14 +13,14 @@ var async = require('async'),
 // servers
 var ws = webserver.createServer(options);
 
-var ss = socketserver.createServer(options);
+//var ss = socketserver.createServer(options);
 
 async.waterfall([
 
   function(callback) {
     logger.init(options.logging, options.debug);
     logger.on('log', function(data) {
-      ss.emit('log', data);
+      //!! ss.emit('log', data);
     });
     callback(null);
   },
