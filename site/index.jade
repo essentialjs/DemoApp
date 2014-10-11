@@ -2,6 +2,14 @@ doctype
 html
   head
     meta(charset="utf-8")
+    != SocketStream
     title Hello
   body
     p This is a dummy page
+
+
+    ul
+      li: a(href="/discuss") See your page discussions.
+      li: a(href="/support") Get Help
+
+    p TODO drop cache when static changes
