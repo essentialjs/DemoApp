@@ -4,6 +4,9 @@
 var http = require('http'),
     ss = require('socketstream');
 
+ss.client.options.dirs.static = "/site";
+ss.client.options.dirs.assets = "/site/assets";
+
 // Define a single-page client called 'discuss'
 ss.client.define('discuss', {
   view: 'discuss.jade',
