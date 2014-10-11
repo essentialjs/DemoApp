@@ -30,6 +30,7 @@
   },
   "devDependencies": {
     "amdclean": "^2.2.7",
+    "compile-middleware": "^0.2.8",
     "connect-livereload": "~0.1.4",
     "expect.js": "git+https://github.com/truongsinh/expect",
     "grunt": "~0.4.1",
