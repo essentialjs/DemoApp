@@ -1,3 +1,12 @@
+## Running locally
+
+    npm install -g bower
+    bower
+    npm install
+    npm start
+
+
+
 ## Made with
 
         //no: npm install -g generator-webapp

@@ -24,7 +24,10 @@ ss.http.route('/discuss', function(req, res){
 ss.client.formatters.add(require('ss-sass'));
 
 // HTML template formatters
-ss.client.formatters.add(require('ss-jade'));
+ss.client.formatters.add(require('ss-jade'),{
+	locals: {} // extra variables
+	// headers {}
+});
 
 // Use server-side compiled Hogan (Mustache) templates. Others engines available
 ss.client.templateEngine.use(require('ss-hogan'));
