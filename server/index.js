@@ -24,7 +24,7 @@ ss.client.formatters.add(require('ss-sass'));
 ss.client.formatters.add(require('ss-jade'));
 
 // Use server-side compiled Hogan (Mustache) templates. Others engines available
-ss.client.templateEngine.use(require('ss-clientjade'));
+ss.client.templateEngine.use(require('ss-hogan'));
 
 ss.ws.transport.use(require('ss-sockjs'), {
 	client: {
