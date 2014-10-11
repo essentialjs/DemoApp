@@ -1,0 +1,229 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "fluent-player";
+  src:url("fonts/fluent-player.eot");
+  src:url("fonts/fluent-player.eot?#iefix") format("embedded-opentype"),
+    url("fonts/fluent-player.woff") format("woff"),
+    url("fonts/fluent-player.ttf") format("truetype"),
+    url("fonts/fluent-player.svg#fluent-player") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "fluent-player" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "fluent-player" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-play-circle:before {
+  content: "e";
+}
+.icon-play:before {
+  content: "a";
+}
+.icon-pause:before {
+  content: "b";
+}
+.icon-next:before {
+  content: "c";
+}
+.icon-previous:before {
+  content: "d";
+}
+.icon-stop:before {
+  content: "f";
+}
+.icon-shuffle:before {
+  content: "g";
+}
+.icon-get-book:before {
+  content: "h";
+}
+.icon-bookmark:before {
+  content: "i";
+}
+.icon-book:before {
+  content: "j";
+}
+.icon-star:before {
+  content: "k";
+}
+.icon-social-twitter:before {
+  content: "l";
+}
+.icon-social-dropbox:before {
+  content: "m";
+}
+.icon-social-apple:before {
+  content: "n";
+}
+.icon-social-android:before {
+  content: "o";
+}
+.icon-social-google-plus:before {
+  content: "p";
+}
+.icon-social-path:before {
+  content: "q";
+}
+.icon-social-linkedin:before {
+  content: "r";
+}
+.icon-social-facebook:before {
+  content: "s";
+}
+.icon-social-pinterest:before {
+  content: "t";
+}
+.icon-social-stack-overflow:before {
+  content: "u";
+}
+.icon-twitter-square:before {
+  content: "v";
+}
+.icon-twitter:before {
+  content: "w";
+}
+.icon-linkedin:before {
+  content: "x";
+}
+.icon-linkedin-square:before {
+  content: "y";
+}
+.icon-google-plus:before {
+  content: "z";
+}
+.icon-google-plus-1:before {
+  content: "A";
+}
+.icon-pinterest-square:before {
+  content: "C";
+}
+.icon-youtube:before {
+  content: "D";
+}
+.icon-email-envelope:before {
+  content: "B";
+}
+.icon-letter-mail:before {
+  content: "E";
+}
+.icon-call-phone:before {
+  content: "F";
+}
+.icon-call-phone-square:before {
+  content: "G";
+}
+.icon-phone:before {
+  content: "H";
+}
+.icon-volume-up:before {
+  content: "I";
+}
+.icon-volume-down:before {
+  content: "J";
+}
+.icon-volume-down-1:before {
+  content: "K";
+}
+.icon-bell-two:before {
+  content: "L";
+}
+.icon-music-note:before {
+  content: "M";
+}
+.icon-refresh:before {
+  content: "N";
+}
+.icon-loop:before {
+  content: "O";
+}
+.icon-comment-discussion:before {
+  content: "P";
+}
+.icon-credit-card:before {
+  content: "Q";
+}
+.icon-key:before {
+  content: "R";
+}
+.icon-person:before {
+  content: "S";
+}
+.icon-organization:before {
+  content: "T";
+}
+.icon-tools:before {
+  content: "U";
+}
+.icon-torso:before {
+  content: "W";
+}
+.icon-torso-business:before {
+  content: "X";
+}
+.icon-torso-female:before {
+  content: "Y";
+}
+.icon-torsos:before {
+  content: "Z";
+}
+.icon-torsos-all:before {
+  content: "0";
+}
+.icon-torsos-all-female:before {
+  content: "1";
+}
+.icon-torsos-female-male:before {
+  content: "2";
+}
+.icon-torsos-male-female:before {
+  content: "3";
+}
+.icon-shopping-cart:before {
+  content: "6";
+}
+.icon-user:before {
+  content: "V";
+}
+.icon-user-add:before {
+  content: "4";
+}
+.icon-users:before {
+  content: "5";
+}
+.icon-lock:before {
+  content: "7";
+}
+.icon-lock-1:before {
+  content: "8";
+}
+.icon-unlock:before {
+  content: "9";
+}
+.icon-unlock-2:before {
+  content: "!";
+}
