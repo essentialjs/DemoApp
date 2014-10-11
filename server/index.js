@@ -6,22 +6,25 @@ var http = require('http'),
 
 // Define a single-page client called 'discuss'
 ss.client.define('discuss', {
-  view: 'discuss.html',
+  view: 'discuss.jade',
   css:  ['libs/reset.css', 'discuss.scss'],
   code: ['libs/jquery.min.js', 'app'],
   tmpl: '*'
 });
 
 // Serve this client on the root URL
-ss.http.route('/', function(req, res){
+ss.http.route('/discuss', function(req, res){
   res.serveClient('discuss');
 });
 
 // Code Formatters
 ss.client.formatters.add(require('ss-sass'));
 
+// HTML template formatters
+ss.client.formatters.add(require('ss-jade'));
+
 // Use server-side compiled Hogan (Mustache) templates. Others engines available
-ss.client.templateEngine.use(require('ss-hogan'));
+ss.client.templateEngine.use(require('ss-clientjade'));
 
 ss.ws.transport.use(require('ss-sockjs'), {
 	client: {
