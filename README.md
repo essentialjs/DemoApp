@@ -6,6 +6,9 @@
     npm start
 
 
+<a href="http://socketstream.github.io/socketstream/docs/">SocketStream communication</a>
+
+
 
 ## Made with
 
