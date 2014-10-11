@@ -7,7 +7,7 @@ var http = require('http'),
 // Define a single-page client called 'discuss'
 ss.client.define('discuss', {
   view: 'discuss.html',
-  css:  ['libs/reset.css', 'app.styl'],
+  css:  ['libs/reset.css', 'discuss.scss'],
   code: ['libs/jquery.min.js', 'app'],
   tmpl: '*'
 });
