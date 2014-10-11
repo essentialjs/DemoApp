@@ -50,3 +50,6 @@ https://github.com/gfranko/amdclean
 
 https://github.com/buildjs/rigger
 
+
+npm install -g nodemon  (remy/nodemon)
+

@@ -1,12 +1,21 @@
 var fs = require('fs'),
     path = require('path'),
     _ = require('lodash'),
-    iniparser = require('iniparser');
+    iniparser = require('iniparser'),
+    root = path.join(__dirname,'..');
 
 var settings = {
   title: 'demoapp',
-  version: require('./package.json').version,
+  version: require('../package.json').version,
   setupVersion: 'directly from source',
+
+  // where is stuff
+  "public": root + '/site',
+  assets: root + '/site/assets',
+
+  // DEV only paths
+  scss: root + '/site/scss',
+
   // host: 'localhost',
   webPort: 4400,
   // sslPort: 5001,
@@ -18,7 +27,6 @@ var settings = {
   // logging: { filename: __dirname + '/log.log' },
   logging: { level: 'debug', logBufferSize: 1000 },
   sdkService: true,
-  devicestacksPath: __dirname + '/node_modules',
   lngs: getLanguages(),
   debug: (process.env.NODE_ENV !== 'production' || process.env.DEBUG) ? true : false
 };
@@ -26,7 +34,7 @@ var settings = {
 settings.uri = 'http://' + settings.host + ':' + settings.servicePort;
 settings.sessionSecret = settings.title;
 settings.sessionKey = settings.title + '.sid';
-settings.root = __dirname;
+settings.root = root;
 
 settings.statics = {
   'app': settings.root + '/client/app',
@@ -35,11 +43,13 @@ settings.statics = {
   'js': settings.root + '/client/assets/js'
 };
 
+settings.sockjs_opts = {
+  sockjs_url: "http://cdn.sockjs.org/sockjs-0.3.min.js"
+};
+
 if (process.env.NODE_ENV == 'production') {
 
   settings.logging.level = 'error';
-
-  settings.devicestacksPath = __dirname + '/node_modules';
 
   settings.host = 'localhost';
   // settings.servicePort = 80;
@@ -69,7 +79,7 @@ if (process.env.NODE_ENV == 'production') {
 
 /* helpers */
 function getLanguages() {
-  var lngs = fs.readdirSync(__dirname + '/locales');
+  var lngs = fs.readdirSync(root + '/locales');
   return _.reject(lngs, function(lng) {
     return lng.indexOf('.') === 0;
   });
@@ -81,34 +91,11 @@ function isRelative(p) {
 }
 
 // read from file created from setup
-if (fs.existsSync(__dirname + '/settings.ini')) {
-  var properties = iniparser.parseSync(__dirname + '/settings.ini');
+if (fs.existsSync(root + '/settings.ini')) {
+  var properties = iniparser.parseSync(root + '/settings.ini');
 
   if (properties.setupVersion) {
     settings.setupVersion = 'v' + properties.setupVersion;
-  }
-
-  if (properties.sdkService !== null && properties.sdkService !== undefined) {
-    if (properties.sdkService) {
-      settings.sdkService = true;
-    } else {
-      settings.sdkService = false;
-    }
-  }
-
-  if (properties.servicePort) {
-    settings.servicePort = properties.servicePort;
-  }
-
-  if (properties.sdkPort) {
-    settings.sdkPort = properties.sdkPort;
-  }
-
-  settings.devicestacksPath = __dirname + '/../devicestacks';
-  if (properties.devicestacksPath) {
-    if (isRelative(properties.devicestacksPath)) {
-      settings.devicestacksPath = __dirname + '/' + properties.devicestacksPath;
-    }
   }
 }
 
