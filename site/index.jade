@@ -1,9 +1,10 @@
+- var title = "HTML5 Demo App"
 doctype
 html
   head
     meta(charset="utf-8")
     != SocketStream
-    title Hello
+    title= title
   body
     p This is a dummy page
 
@@ -13,3 +14,5 @@ html
       li: a(href="/support") Get Help
 
     p TODO drop cache when static changes
+
+    p TODO variables shared, include --
