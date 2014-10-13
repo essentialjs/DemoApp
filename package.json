@@ -7,6 +7,14 @@
   "engines": {
     "node": ">=0.8.0"
   },
+  "libs-js": [
+    "client/components/jquery/jquery.js",
+    "client/components/i18next/i18next.js",
+    "client/components/angular/angular.js",
+    "client/components/angular-animate/angular-animate.js",
+    "client/components/angular-sanitize/angular-sanitize.js",
+    "client/components/angular-sockjs/socket.js"
+  ],
   "dependencies": {
     "async": "^0.9.0",
     "body-parser": "^1.9.0",
@@ -64,15 +72,21 @@
     "grunt-webp": "~0.0.1",
     "gulp": "^3.8.8",
     "gulp-amdclean": "^1.0.0",
+    "gulp-cached": "^1.0.1",
+    "gulp-concat": "^2.4.1",
     "gulp-cssmin": "^0.1.6",
     "gulp-htmlmin": "^0.2.0",
     "gulp-imagemin": "^1.0.1",
     "gulp-jade": "^0.8.0",
     "gulp-jshint": "^1.8.5",
     "gulp-mocha": "^1.1.1",
+    "gulp-remember": "^0.2.1",
     "gulp-rigger": "^0.5.8",
     "gulp-sass": "^1.1.0",
+    "gulp-sourcemaps": "^1.2.4",
     "gulp-uglify": "^1.0.1",
+    "gulp-watch": "^1.1.0",
+    "gulp-watch-sequence": "0.0.4",
     "handlebars": "^2.0.0",
     "istanbul": "^0.3.2",
     "jshint-stylish": "~0.1.5",
