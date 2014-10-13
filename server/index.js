@@ -47,13 +47,13 @@ ss.ws.transport.use(require('ss-sockjs'), {
 // Minimize and pack assets if you type: SS_ENV=production node app.js
 if (ss.env === 'production') ss.client.packAssets();
 else {
-	var jadeware = require("../lib/util/jadeware");
-	ss.http.middleware.prepend(jadeware({
-		debug: true,
-		base_dir: path.join(__dirname,".."),
-		vars: {},
-		src: ss.client.options.dirs.static
-	}));
+	// var jadeware = require("../lib/util/jadeware");
+	// ss.http.middleware.prepend(jadeware({
+	// 	debug: true,
+	// 	base_dir: path.join(__dirname,".."),
+	// 	vars: {},
+	// 	src: ss.client.options.dirs.static
+	// }));
 }
 
 // Start web server
