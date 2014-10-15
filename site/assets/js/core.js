@@ -1,3 +1,3 @@
-!function(globals,document) {
+!function(global,document) {
 
 }(window,document);
