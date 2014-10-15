@@ -39,7 +39,7 @@ gulp.task('rigger', function () {
     .pipe(uglify())  // { outSourceMap: true }
     .pipe(remember())
     .pipe(concat({ path:'libs.min.js' }))  //TODO header
-    .pipe(sourcemaps.write())
+    .pipe(sourcemaps.write('./maps'))
     .pipe(gulp.dest('./site/assets/js/'));
 
   gulp.src( pkg["libs-js"])
@@ -50,6 +50,12 @@ gulp.task('rigger', function () {
     .pipe(rigger())
     .pipe(gulp.dest('./site/assets/js/'));
 });
+
+/* Done by CI
+gulp.task('dist', function() {
+    submodule dist
+});
+*/
 
 gulp.task('watch',function() {
   gulp.watch(paths.site, ['site']);
