@@ -1,13 +1,10 @@
-- var title = "HTML5 Demo App"
-doctype
-html
-  head
-    meta(charset="utf-8")
-    != SocketStream
-    title= title
-  body
-    p This is a dummy page
+extends /layouts/master.jade
 
+block title
+    | HTML5 Demo App
+
+block content
+    p This is a dummy page
 
     ul
       li: a(href="/discuss") See your page discussions.

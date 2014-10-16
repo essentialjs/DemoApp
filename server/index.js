@@ -25,7 +25,8 @@ ss.http.route('/discuss', function(req, res){
 ss.client.formatters.add(require('ss-sass'));
 
 // HTML template formatters
-ss.client.formatters.add(require('ss-jade'),{
+ss.client.formatters.add(require('../lib/ss/jade'),{
+    basedir: path.join(__dirname,"../lib"),
 	locals: {} // extra variables
 	// headers {}
 });

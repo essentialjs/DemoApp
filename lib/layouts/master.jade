@@ -1,0 +1,29 @@
+include /mixins/page-helpers.jade
+
+- googleAnalyticsSiteID = "UA-XXXXX-X"
+doctype html
+<!--[if IE 8 ]><html lang="en" class="no-js ie8"><![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!-->
+html.no-js(lang="en")
+  <!--<![endif]-->
+  head
+    meta(charset="utf-8")
+    != SocketStream
+    title
+      block title
+    block head
+
+  body
+    div#content
+      block content
+        p Content block to be filled in
+
+
+      if googleAnalyticsSiteID
+        script.
+          var _gaq=[['_setAccount','#{googleAnalyticsSiteID}'],['_trackPageview']];
+              (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+              g.src='//www.google-analytics.com/ga.js';
+              s.parentNode.insertBefore(g,s)}(document,'script'));
+
+

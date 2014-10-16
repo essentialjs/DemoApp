@@ -1,4 +1,5 @@
 var gulp = require('gulp'),
+  path = require('path'),
   jade = require('gulp-jade'),
   uglify = require('gulp-uglify'),
   sourcemaps = require('gulp-sourcemaps'),
@@ -25,6 +26,7 @@ gulp.task('site', function() {
 
   gulp.src('./site/*.jade')
     .pipe(jade({
+      basedir: path.join(__dirname,'lib'),
       locals: YOUR_LOCALS
     }))
     .pipe(gulp.dest('./site/'))
