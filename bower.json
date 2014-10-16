@@ -13,7 +13,11 @@
     "angular-animate": "~1.2.26",
     "angular-sanitize": "~1.2.26",
     "angular-ui-router": "~0.2.11",
-    "json-serialize": "~1.1.2"
+    "json-serialize": "~1.1.2",
+    "normalize-css": "~3.0.2",
+    "base64": "~0.3.0",
+    "es5-shim": "~4.0.3",
+    "normalize.scss": "~3.0.1+normalize.3.0.1"
   },
   "devDependencies": {}
 }

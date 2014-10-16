@@ -53,6 +53,12 @@ gulp.task('rigger', function () {
     .pipe(gulp.dest('./site/assets/js/'));
 });
 
+gulp.task('sass', function () {
+    gulp.src('./client/css/site/**/*.scss')
+        .pipe(sass())
+        .pipe(gulp.dest('./site/assets/css'));
+});
+
 /* Done by CI
 gulp.task('dist', function() {
     submodule dist
@@ -77,11 +83,6 @@ gulp.task('default', ['watch','site','rigger']);
 /*
 var
 
-gulp.task('sass', function () {
-    gulp.src('./scss/*.scss')
-        .pipe(sass())
-        .pipe(gulp.dest('./css'));
-});
 
 var ;
 
