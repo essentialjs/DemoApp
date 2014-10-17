@@ -7,6 +7,7 @@ var gulp = require('gulp'),
   through = require('through'),
   _ = require('lodash'),
   jade = require('gulp-jade'),
+  jshint = require('gulp-jshint'),
   uglify = require('gulp-uglify'),
   sourcemaps = require('gulp-sourcemaps'),
   rigger = require('gulp-rigger'),
@@ -121,6 +122,24 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('./site/assets/css'));
 });
 
+gulp.task('lint', function() {
+  return gulp.src('./lib/*.js')
+    .pipe(jshint())
+    .pipe(jshint.reporter('YOUR_REPORTER_HERE'));
+});
+
+gulp.task('jshint', function() {
+  return gulp.src(['./lib/**/*.js'])
+    .pipe(jshint('.jshintrc'))
+    .pipe(jshint.reporter(require('jshint-summary')({
+      fileColCol: ',bold',
+      positionCol: ',bold',
+      codeCol: 'green,bold',
+      reasonCol: 'cyan'
+    })))
+    .pipe(jshint.reporter('fail'));
+});
+
 /* Done by CI
 gulp.task('dist', function() {
     submodule dist
@@ -170,17 +189,6 @@ gulp.task('templates', function() {
     .pipe(gulp.dest('./dist/'))
 });
 
-
-
-var    ;
-
-var jshint = require('gulp-jshint');
-
-gulp.task('lint', function() {
-  return gulp.src('./lib/*.js')
-    .pipe(jshint())
-    .pipe(jshint.reporter('YOUR_REPORTER_HERE'));
-});
 
 var mocha = require('gulp-mocha');
 
