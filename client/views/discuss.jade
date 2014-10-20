@@ -18,7 +18,6 @@ block content
     input#myMessage(type="text", autocomplete="off")
 
 block append body-scripts
-  != SocketStream
   script.
     ss.load.code('/libs/ngDiscuss.js',function() {
         debugger;

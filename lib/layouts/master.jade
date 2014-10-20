@@ -8,11 +8,10 @@ html.no-js(lang="en")
   <!--<![endif]-->
   head
     meta(charset="utf-8")
-    != SocketStream
     title
       block title
     block head
-        script(src="/assets/js/core.js")
+      script(src="/assets/js/core.js")
 
   body
     div#content
@@ -21,6 +20,7 @@ html.no-js(lang="en")
 
       block body-scripts
         script(src="/assets/js/libs.js")
+      != SocketStream
 
       if googleAnalyticsSiteID
         script.
