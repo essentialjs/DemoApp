@@ -19,3 +19,9 @@ block content
 
 block append body-scripts
   != SocketStream
+  script.
+    ss.load.code('/libs/ngDiscuss.js',function() {
+        debugger;
+        var ngDiscuss = require('ngDiscuss');
+        console.log("Angular Discuss",ngDiscuss);
+    });

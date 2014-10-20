@@ -12,7 +12,7 @@ ss.client.options.dirs.assets = "/site/assets";
 ss.client.define('discuss', {
   view: 'discuss.jade',
   css:  ['libs/reset.css', 'discuss.scss'],
-  code: ['libs/angular.js', 'app'],
+  code: [/*'libs/angular.js',*/ 'app'],
   tmpl: '*'
 });
 
@@ -33,11 +33,11 @@ ss.client.formatters.add(require('../lib/ss/jade'),{
 	// headers {}
 });
 
-// Use server-side compiled Hogan (Mustache) templates. Others engines available
-ss.client.templateEngine.use(require('ss-hogan'));
+// Use server-side compiled Angular templates.
+ss.client.templateEngine.use('angular');
 
 // respond with angular content
-ss.responders.add(require('ss-angular'),{pollFreq: 1000});
+ss.responders.add(require('../lib/ss/angular/server'),{pollFreq: 1000});
 
 
 ss.ws.transport.use(require('ss-sockjs'), {

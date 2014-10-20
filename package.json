@@ -50,6 +50,7 @@
   },
   "devDependencies": {
     "amdclean": "^2.2.7",
+    "apitree": "^1.2.0",
     "canonical-path": "0.0.2",
     "chalk": "^0.5.1",
     "compile-middleware": "^0.2.8",
