@@ -12,12 +12,15 @@ html.no-js(lang="en")
     title
       block title
     block head
+        script(src="/assets/js/core.js")
 
   body
     div#content
       block content
         p Content block to be filled in
 
+      block body-scripts
+        script(src="/assets/js/libs.js")
 
       if googleAnalyticsSiteID
         script.

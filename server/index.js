@@ -12,7 +12,7 @@ ss.client.options.dirs.assets = "/site/assets";
 ss.client.define('discuss', {
   view: 'discuss.jade',
   css:  ['libs/reset.css', 'discuss.scss'],
-  code: ['libs/jquery.min.js', 'app'],
+  code: ['libs/angular.js', 'app'],
   tmpl: '*'
 });
 
@@ -20,6 +20,8 @@ ss.client.define('discuss', {
 ss.http.route('/discuss', function(req, res){
   res.serveClient('discuss');
 });
+
+ss.session.options.maxAge = 2.6*Math.pow(10,9);
 
 // Code Formatters
 ss.client.formatters.add(require('ss-sass'));
@@ -33,6 +35,10 @@ ss.client.formatters.add(require('../lib/ss/jade'),{
 
 // Use server-side compiled Hogan (Mustache) templates. Others engines available
 ss.client.templateEngine.use(require('ss-hogan'));
+
+// respond with angular content
+ss.responders.add(require('ss-angular'),{pollFreq: 1000});
+
 
 ss.ws.transport.use(require('ss-sockjs'), {
 	client: {

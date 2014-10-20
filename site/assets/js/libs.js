@@ -36905,3 +36905,7 @@ angular.module('bd.sockjs', [])
       };
     };
   });
+
+require.define('angular',function() {
+    return window.angular;
+});

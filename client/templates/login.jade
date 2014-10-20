@@ -1,0 +1,8 @@
+div(ng-controller="AuthCtrl")
+  form.well
+    label Username
+    input(type="text", name="user", ng-model="user", required)
+    label Password
+    input(type="password", name="password", ng-model="password", required)
+    button.btn(type="submit", ng-click="processAuth()") Sign In
+  span.label.label-important(ng-show="showError") {{errorMsg}}

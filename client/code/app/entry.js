@@ -11,11 +11,14 @@ ss.server.on('reconnect', function(){
   console.log('Connection back up :-)');
 });
 
+require('ssAngular');
+require('/controllers');
+
 ss.server.on('ready', function(){
 
   // Wait for the DOM to finish loading
   jQuery(function(){
-    
+
     // Load app
     require('/app');
 

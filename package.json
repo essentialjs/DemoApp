@@ -16,7 +16,8 @@
     "client/components/angular/angular.js",
     "client/components/angular-animate/angular-animate.js",
     "client/components/angular-sanitize/angular-sanitize.js",
-    "client/components/angular-sockjs/socket.js"
+    "client/components/angular-sockjs/socket.js",
+    "client/code/site/link-with-browserify.js"
   ],
   "dependencies": {
     "async": "^0.9.0",
