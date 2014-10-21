@@ -1,0 +1,1 @@
+-R spec -t 15000 --globals async,deferred

@@ -1,0 +1,12 @@
+mixin enumsList(name)
+  - var desc = describeEnum(name)
+  h6 Values:
+  ul
+    each value, index in desc.values
+      li= value
+
+doctype
+html
+    body
+        dd#NUMS
+            +enumsList('NUMS')
