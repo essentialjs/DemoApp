@@ -11,6 +11,13 @@ ss.server.on('reconnect', function(){
   console.log('Connection back up :-)');
 });
 
+//TODO configure predefined modules to recognise
+if (window.angular) {
+    require.define('angular',function() {
+        return window.angular;
+    });
+}
+
 require('ssAngular');
 require('/controllers');
 
@@ -21,7 +28,7 @@ ss.server.on('ready', function(){
 
     // Load app
     require('/app');
-
+    require('ab');
   });
 
 });

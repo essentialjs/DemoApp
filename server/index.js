@@ -12,7 +12,7 @@ ss.client.options.dirs.assets = "/site/assets";
 ss.client.define('discuss', {
   view: 'discuss.jade',
   css:  ['libs/reset.css', 'discuss.scss'],
-  code: [/*'libs/angular.js',*/ 'app'],
+  code: [/*'libs/angular.js',*/ 'app', 'system'],
   tmpl: '*'
 });
 
