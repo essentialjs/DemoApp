@@ -1,8 +1,6 @@
 ## Running locally
 
-    npm install -g bower
-    bower
-    npm install
+    npm prepare
     npm start
 
 
