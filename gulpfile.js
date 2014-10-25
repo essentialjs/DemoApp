@@ -2,9 +2,9 @@ var gulp = require('gulp'),
   GithubApi = require('github'),
   path = require('canonical-path'),
   q = require('q'),
-  request = require('request'),
+  // request = require('request'),
   semver = require('semver'),
-  through = require('through'),
+  // through = require('through'),
   _ = require('lodash'),
   jade = require('gulp-jade'),
   jshint = require('gulp-jshint'),
@@ -16,13 +16,11 @@ var gulp = require('gulp'),
   concat = require('gulp-concat'),
   footer = require('gulp-footer'),
   minifyCss = require('gulp-minify-css'),
-  uglify = require('gulp-uglify'),
-  rename = require('gulp-rename'),
-  template = require('gulp-template'),
+  // rename = require('gulp-rename'),
+  // template = require('gulp-template'),
   gutil = require('gulp-util'),
   Amdclean  = require('gulp-amdclean'),
 	// imagemin = require('gulp-imagemin'),
-	// sourcemaps = require('gulp-sourcemaps'),
   sass = require('gulp-sass');
 
 var argv = require('minimist')(process.argv.slice(2));
@@ -162,11 +160,6 @@ gulp.task('watch-all', ['watch','site','rigger']);
 
 
 /*
-var
-
-
-var ;
-
 gulp.src('./scss/*.scss')
   .pipe(sourcemaps.init())
     .pipe(sass())
@@ -174,21 +167,6 @@ gulp.src('./scss/*.scss')
   .pipe('./css');
 
 // will write the source maps to ./dest/css/maps
-
-var
-
-//Compile to JS
-
-var jade = require('gulp-jade');
-
-gulp.task('templates', function() {
-  gulp.src('./lib/*.jade')
-    .pipe(jade({
-      client: true
-    }))
-    .pipe(gulp.dest('./dist/'))
-});
-
 
 var mocha = require('gulp-mocha');
 

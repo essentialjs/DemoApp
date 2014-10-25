@@ -8,6 +8,10 @@ var http = require('http'),
 ss.client.options.dirs.static = "/site";
 ss.client.options.dirs.assets = "/site/assets";
 
+// these are handled on static page
+ss.client.assets.send('shims','json.min.js','');
+ss.client.assets.send('libs','browserify.js','');
+
 // Define a single-page client called 'discuss'
 ss.client.define('discuss', {
   view: 'discuss.jade',
