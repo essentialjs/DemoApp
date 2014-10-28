@@ -43,6 +43,7 @@ ss.client.templateEngine.use('angular');
 // respond with angular content
 ss.responders.add(require('../lib/ss/angular/server'),{pollFreq: 1000});
 
+ss.responders.add(require('../lib/ss/echo/server'));
 
 ss.ws.transport.use(require('ss-sockjs'), {
 	client: {
