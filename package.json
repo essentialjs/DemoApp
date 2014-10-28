@@ -1,7 +1,18 @@
 {
   "name": "demoapp",
+  "title": "HTML5 Demo App",
   "author": "thepian",
   "description": "Demo of mobile-centric multi-channel user access",
+  "url":"http://html5demoapp.com",
+  "domain":"html5demoapp.com",
+  "imageUrl":"http://html5demoapp.com/assets/images",
+  "analyticsId":"UA-",
+  "analyticsVersion": "5.2.6",
+  "facebookPage": "HTML5DemoApp",
+  "facebookAppId": "33333",
+  "facebookAppSecret": "33333",
+  "twitter": "thepian",
+
   "version": "0.2.0",
   "main": "web.js",
   "repository": {

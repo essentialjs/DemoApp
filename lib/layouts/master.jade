@@ -1,6 +1,5 @@
 include /mixins/page-helpers.jade
 
-- googleAnalyticsSiteID = "UA-XXXXX-X"
 doctype html
 <!--[if IE 8 ]><html lang="en" class="no-js ie8"><![endif]-->
 <!--[if (gte IE 9)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!-->
@@ -10,23 +9,29 @@ html.no-js(lang="en")
     meta(charset="utf-8")
     title
       block title
+        |= package.title
+
     block head
       script(src="/assets/js/core.js")
 
+    //- TODO split in HEAD/BODY activity
+    if package.analyticsId
+      script.
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', '#{package.analyticsId}', 'auto');
+        ga('send', 'pageview', {'dimension5':'#{author}'});
+
   body
-    div#content
+    div#content(data-router-block="content")
       block content
         p Content block to be filled in
 
-      block body-scripts
-        script(src="/assets/js/libs.js")
-        != SocketStream
-
-      if googleAnalyticsSiteID
-        script.
-          var _gaq=[['_setAccount','#{googleAnalyticsSiteID}'],['_trackPageview']];
-              (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-              g.src='//www.google-analytics.com/ga.js';
-              s.parentNode.insertBefore(g,s)}(document,'script'));
+    block body-scripts
+      script(src="/assets/js/libs.js")
+      != SocketStream
 
 
