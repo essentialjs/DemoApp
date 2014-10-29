@@ -7,6 +7,7 @@ var http = require('http'),
 
 ss.client.options.dirs.static = "/site";
 ss.client.options.dirs.assets = "/site/assets";
+ss.client.options.entryModuleName = null;
 
 // these are handled on static page
 ss.client.assets.send('shims','json.min.js','');
@@ -38,7 +39,8 @@ ss.client.formatters.add(require('../lib/ss/jade'),{
 });
 
 // Use server-side compiled Angular templates.
-ss.client.templateEngine.use('angular');
+//ss.client.templateEngine.use('angular');
+ss.client.templateEngine.use(require('ss-hogan'));
 
 // respond with angular content
 ss.responders.add(require('../lib/ss/angular/server'),{pollFreq: 1000});
@@ -59,6 +61,8 @@ ss.ws.transport.use(require('ss-sockjs'), {
 // Minimize and pack assets if you type: SS_ENV=production node app.js
 if (ss.env === 'production') ss.client.packAssets();
 else {
+    //ss.client.packAssets();
+
 	// var jadeware = require("../lib/util/jadeware");
 	// ss.http.middleware.prepend(jadeware({
 	// 	debug: true,

@@ -26,12 +26,15 @@ html.no-js(lang="en")
         ga('send', 'pageview', {'dimension5':'#{author}'});
 
   body
-    div#content(data-router-block="content")
-      block content
-        p Content block to be filled in
+    main
+      div#content(data-router-block="content")
+        block content
+          p Content block to be filled in
+      != SocketStream
 
     block body-scripts
       script(src="/assets/js/libs.js")
-      != SocketStream
+      script.
+        //TODO require.runMain();
 
 

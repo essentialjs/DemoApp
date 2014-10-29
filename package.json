@@ -22,7 +22,6 @@
     "node": ">=0.8.0"
   },
   "libs-js": [
-    "lib/client/browserify.js",
     "client/components/jquery/jquery.js",
     "client/components/i18next/i18next.js",
     "client/components/angular/angular.js",

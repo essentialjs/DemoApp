@@ -3,8 +3,6 @@ extends /layouts/master
 block title
   | HTML5 Demo App
 
-block append head
-
 block content
   a(href="https://github.com/socketstream/socketstream")
     img(src="/assets/images/logo.png", alt="SocketStream Logo", width=160, height=160)
@@ -19,8 +17,14 @@ block content
 
 block append body-scripts
   script.
+    !function() {
+        var entry = require('/entry'),
+            ss = require('socketstream');
+    /*
     ss.load.code('/libs/ngDiscuss.js',function() {
-        debugger;
+        // debugger;
         var ngDiscuss = require('ngDiscuss');
         console.log("Angular Discuss",ngDiscuss);
     });
+    */
+    }();
