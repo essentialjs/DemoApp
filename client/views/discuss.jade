@@ -18,13 +18,10 @@ block content
 block append body-scripts
   script.
     !function() {
-        var entry = require('/entry'),
+        var entry = require('/discuss/entry'),
             ss = require('socketstream');
-    /*
-    ss.load.code('/libs/ngDiscuss.js',function() {
-        // debugger;
-        var ngDiscuss = require('ngDiscuss');
-        console.log("Angular Discuss",ngDiscuss);
-    });
-    */
+        ss.load.code('/dynamic/ngDiscuss.js',function() {
+            var ngDiscuss = require('/dynamic/ngDiscuss');
+            console.log("Angular Discuss",ngDiscuss);
+        });
     }();

@@ -7,7 +7,8 @@ var http = require('http'),
 
 ss.client.options.dirs.static = "/site";
 ss.client.options.dirs.assets = "/site/assets";
-ss.client.options.entryModuleName = null;
+ss.client.options.entryModuleName = null; //TODO default = 'entry'
+ss.client.options.globalModulePaths = true;
 
 // these are handled on static page
 ss.client.assets.send('shims','json.min.js','');
@@ -17,7 +18,7 @@ ss.client.assets.send('libs','browserify.js','');
 ss.client.define('discuss', {
   view: 'discuss.jade',
   css:  ['libs/reset.css', 'discuss.scss'],
-  code: [/*'libs/angular.js',*/ 'app', 'system'],
+  code: ['discuss', 'system'],
   tmpl: '*'
 });
 

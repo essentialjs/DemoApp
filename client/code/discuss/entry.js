@@ -19,7 +19,7 @@ if (window.angular) {
 }
 
 require('ssAngular');
-require('/controllers');
+require('./controllers');
 
 ss.server.on('ready', function(){
 
@@ -27,7 +27,7 @@ ss.server.on('ready', function(){
   jQuery(function(){
 
     // Load app
-    require('/app');
+    require('./app');
     require('ab');
   });
 
