@@ -168,6 +168,6 @@
   "scripts": {
     "prepare": "npm install -g bower gulp && npm install && bower && echo Next step is 'npm test' or 'npm start'",
     "test": "mocha test/spec",
-    "start": "node web.js"
+    "start": "node -e \"require('./server')();\""
   }
 }

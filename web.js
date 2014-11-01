@@ -6,7 +6,7 @@ var path = require('path'),
     existsSync = fs.existsSync || path.existsSync;
 
 if (!existsSync(path.join(__dirname, 'server/index.js'))) {
-  module.exports = require('./dist/server');
+  module.exports = require('./dist/server')(/*require('./server/settings')*/);
 } else {
-  module.exports = require('./server');
+  module.exports = require('./server')(/*require('./server/settings')*/);
 }

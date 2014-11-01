@@ -73,12 +73,15 @@ else {
 	// }));
 }
 
-// Start web server
-var server = http.Server(ss.http.middleware);
-server.listen(3000);
+/**
+ * Start server with config
+ */
+module.exports = function(config) {
+	config = config || {};
+	var server = http.Server(ss.http.middleware);
+	server.listen(config.port || 3000);
 
-//TODO configurable port
-//TODO config SSL
+	// Start SocketStream
+	ss.start(server);
+};
 
-// Start SocketStream
-ss.start(server);
